@@ -61,6 +61,9 @@ flutter:
     - assets/images/splash/BigBites.png
     - assets/images/choose_to_sign_in/top_surface.png
     - assets/images/choose_to_sign_in/BigBites.png
+    - assets/images/sign_in/top_surface.png
+    - assets/images/sign_in/user_image.png
+    
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,3 +1,5 @@
+import 'package:big_bites/pages/create_an_account.dart';
+import 'package:big_bites/pages/sign_in.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
@@ -64,7 +66,10 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                     minimumSize: Size(double.infinity, 60), // Full-width button
                   ),
                   onPressed: () {
-                    // Add your sign-in logic here
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignInPage()),
+                    );
                   },
                   child: Text(
                     'Sign In',
@@ -93,7 +98,10 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                     minimumSize: Size(double.infinity, 60), // Full-width button
                   ),
                   onPressed: () {
-                    // Add your create account logic here
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CreateAnAccountPage()),
+                    );
                   },
                   child: Text(
                     'Create an Account',
@@ -113,3 +121,7 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
     );
   }
 }
+
+
+
+
