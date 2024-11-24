@@ -64,6 +64,7 @@ flutter:
     - assets/images/sign_in/top_surface.png
     - assets/images/sign_in/user_image.png
     - assets/images/create_an_account/top_surface.png
+    - assets/images/welcome/top_surface.png
     
     
 
