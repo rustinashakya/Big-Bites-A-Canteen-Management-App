@@ -1,5 +1,6 @@
 import 'package:big_bites/pages/sign_in.dart';
 import 'package:big_bites/pages/splash.dart';
+import 'package:big_bites/pages/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: Splash(),
-      // home: SignInPage(),
+      // home: WelcomePage(),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:big_bites/pages/welcome.dart';
 import 'package:flutter/material.dart';
 
 class SignInPage extends StatefulWidget {
@@ -173,7 +174,10 @@ class _SignInPageState extends State<SignInPage> {
                       minimumSize: Size(double.infinity, 60), // Full-width button
                     ),
                     onPressed: () {
-                      // Add your functionality here
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WelcomePage()),
+                      );
                     },
                     child: Text(
                       'Sign In',
