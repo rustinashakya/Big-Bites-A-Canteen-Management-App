@@ -52,32 +52,31 @@ class _OrganizationCodeState extends State<OrganizationCode> {
             child: Column(
               children: [
                 // text field
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFF5F5F5), // Background color
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                      side: BorderSide(
-                        color: Colors.black.withOpacity(0.25), // Black border with 25% opacity
-                        width: 2.0,
+               SizedBox(
+                  width: double.infinity,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Color(0xFFF5F5F5), // Background color
+                      hintText: 'Add Your Organization Code ',
+                      hintStyle: TextStyle(
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w400, // Regular weight
+                        fontSize: 18,
+                        color: Colors.grey,
                       ),
-                    ),
-                    minimumSize: Size(double.infinity, 60), // Full-width button
-                  ),
-                  onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => SignInPage()),
-                    // );
-                  },
-                  child: Text(
-                    'Add Your Organization Code',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontFamily: 'Inter', // Custom font
-                      fontWeight: FontWeight.w400, // Regular weight
-                      fontSize: 18, // Font size in px
-                      color: Color(0xFF5F5F5F), // Text color
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide: BorderSide(
+                          color: Color(0xFFD9D9D9),
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide: BorderSide(
+                          color: Color(0xFFD9D9D9),
+                        ),
+                      ),
                     ),
                   ),
                 ),
