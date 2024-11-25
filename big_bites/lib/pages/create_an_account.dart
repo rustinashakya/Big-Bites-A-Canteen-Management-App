@@ -91,7 +91,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   ),
                 ),
 
-                SizedBox(height: 20.0),
+                SizedBox(height: 15.0),
 
                 Row(
                   children: [
@@ -123,7 +123,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 16), // Spacer between fields
+                    SizedBox(width: 15), // Spacer between fields
                     // Last Name Field
                     Expanded(
                       child: TextField(
@@ -155,7 +155,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   ],
                 ),
 
-                SizedBox(height: 20.0),
+                SizedBox(height: 15.0),
 
                 // User Type Field
                 TextField(
@@ -184,7 +184,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   ),
                 ),
                 
-                SizedBox(height: 20.0),
+                SizedBox(height: 15.0),
 
                 // Password Text Field
                 TextField(
@@ -226,7 +226,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20.0),
+                SizedBox(height: 15.0),
 
                 // Confirm Password Text Field
                 TextField(
@@ -274,7 +274,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
 
           // Create An Account Button
           Positioned(
-            top: deviceHeight * 0.765, // Positioned at 80% height
+            top: deviceHeight * 0.725, 
             left: 20.0,
             right: 20.0,
             child: ElevatedButton(

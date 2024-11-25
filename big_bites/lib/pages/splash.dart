@@ -1,4 +1,5 @@
 import 'package:big_bites/pages/choose_to_sign_in.dart';
+import 'package:big_bites/pages/organization_code.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -21,7 +22,7 @@ class _SplashState extends State<Splash> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => ChooseToSignIn(),
+        builder: (context) => OrganizationCode(),
       ),
     );
   }
