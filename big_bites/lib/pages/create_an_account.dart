@@ -93,61 +93,67 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
 
                 SizedBox(height: 20.0),
 
-                // First Name Field
-                TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xFFF5F5F5),
-                    hintText: 'Full Name',
-                    hintStyle: TextStyle(
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
-                      color: Colors.grey,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
-                        color: Color(0xFFD9D9D9),
+                Row(
+                  children: [
+                    // First Name Field
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Color(0xFFF5F5F5),
+                          hintText: 'First Name',
+                          hintStyle: TextStyle(
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                            color: Colors.grey,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: BorderSide(
+                              color: Color(0xFFD9D9D9),
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: BorderSide(
+                              color: Color(0xFFD9D9D9),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
-                        color: Color(0xFFD9D9D9),
+                    SizedBox(width: 16), // Spacer between fields
+                    // Last Name Field
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Color(0xFFF5F5F5),
+                          hintText: 'Last Name',
+                          hintStyle: TextStyle(
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                            color: Colors.grey,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: BorderSide(
+                              color: Color(0xFFD9D9D9),
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: BorderSide(
+                              color: Color(0xFFD9D9D9),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
-
-                // SizedBox(height: 20.0),
-
-                // // Last Name Field
-                // TextField(
-                //   decoration: InputDecoration(
-                //     filled: true,
-                //     fillColor: Color(0xFFF5F5F5),
-                //     hintText: 'Last Name',
-                //     hintStyle: TextStyle(
-                //       fontFamily: 'Inter',
-                //       fontWeight: FontWeight.w400,
-                //       fontSize: 16,
-                //       color: Colors.grey,
-                //     ),
-                //     border: OutlineInputBorder(
-                //       borderRadius: BorderRadius.circular(10.0),
-                //       borderSide: BorderSide(
-                //         color: Color(0xFFD9D9D9),
-                //       ),
-                //     ),
-                //     enabledBorder: OutlineInputBorder(
-                //       borderRadius: BorderRadius.circular(10.0),
-                //       borderSide: BorderSide(
-                //         color: Color(0xFFD9D9D9),
-                //       ),
-                //     ),
-                //   ),
-                // ),
 
                 SizedBox(height: 20.0),
 
