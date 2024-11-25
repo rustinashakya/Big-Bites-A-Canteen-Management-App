@@ -17,37 +17,47 @@ class ChooseToSignIn extends StatefulWidget {
 class _ChooseToSignInState extends State<ChooseToSignIn> {
   @override
   Widget build(BuildContext context) {
+    final deviceHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor: Color(0xFFFFFFFF),
       body: Stack(
         children: [
-          Column(
-            children: [
-              // First Image
-              Container(
+          // Top Surface Image
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: deviceHeight * 0.3,
+              child: Image.asset(
+                'assets/images/choose_to_sign_in/top_surface.png',
+                fit: BoxFit.cover,
                 width: double.infinity,
-                child: Image.asset(
-                  'assets/images/choose_to_sign_in/top_surface.png',
-                  fit: BoxFit.cover,
-                ),
               ),
-              SizedBox(height: 8.0),
-
-              // Second Image
-              Container(
-                width: double.infinity,
-                height: MediaQuery.of(context).size.height * 0.4,
-                child: Image.asset(
-                  'assets/images/choose_to_sign_in/BigBites.png',
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ],
+            ),
           ),
 
-          // Buttons at 70% of device height
+          // Big Bites Logo
           Positioned(
-            bottom: MediaQuery.of(context).size.height * 0.1,
+            top: deviceHeight * 0.27, 
+            left: 0,
+            right: 0,
+            child: Center(
+              child: SizedBox(
+                width: 350, 
+                height: 350, 
+                child: Image.asset(
+                  'assets/images/splash/BigBites.png',
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+          ),
+
+          // Buttons
+          Positioned(
+            top: deviceHeight * 0.77, 
             left: 20.0,
             right: 20.0,
             child: Column(
@@ -55,15 +65,15 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                 // Sign In Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFF1B136), // Background color
+                    backgroundColor: Color(0xFFF1B136), 
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                       side: BorderSide(
-                        color: Colors.black.withOpacity(0.25), // Black border with 25% opacity
-                        width: 2.0,
+                        color: Colors.black.withOpacity(0.25), 
+                        width: 1.0,
                       ),
                     ),
-                    minimumSize: Size(double.infinity, 60), // Full-width button
+                    minimumSize: Size(double.infinity, 50), 
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -74,28 +84,28 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                   child: Text(
                     'Sign In',
                     style: TextStyle(
-                      fontFamily: 'Inter', // Custom font
-                      fontWeight: FontWeight.w400, // Regular weight
-                      fontSize: 22, // Font size in px
-                      color: Colors.black, // Text color
+                      fontFamily: 'Inter', 
+                      fontWeight: FontWeight.w400, 
+                      fontSize: 18,
+                      color: Colors.black,
                     ),
                   ),
                 ),
 
-                SizedBox(height: 16.0), // Gap between buttons
+                SizedBox(height: 15.0), 
 
                 // Create an Account Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFFFFFFF), // Background color
+                    backgroundColor: Color(0xFFFFFFFF), 
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                       side: BorderSide(
-                        color: Colors.black.withOpacity(0.25), // Black border with 25% opacity
-                        width: 2.0,
+                        color: Colors.black.withOpacity(0.25), 
+                        width: 1.0,
                       ),
                     ),
-                    minimumSize: Size(double.infinity, 60), // Full-width button
+                    minimumSize: Size(double.infinity, 50), 
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -106,10 +116,10 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                   child: Text(
                     'Create an Account',
                     style: TextStyle(
-                      fontFamily: 'Inter', // Custom font
-                      fontWeight: FontWeight.w400, // Regular weight
-                      fontSize: 22, // Font size in px
-                      color: Colors.black, // Text color
+                      fontFamily: 'Inter', 
+                      fontWeight: FontWeight.w400, 
+                      fontSize: 18, 
+                      color: Colors.black, 
                     ),
                   ),
                 ),
@@ -121,7 +131,3 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
     );
   }
 }
-
-
-
-
