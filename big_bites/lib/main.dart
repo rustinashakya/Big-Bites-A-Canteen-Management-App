@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       // home: CreateAnAccountPage(),
       // home: WelcomePage(),
       //home: OrganizationCode(),
-      home: AddMenu(),
+      home: const AddMenu(),
     );
   }
 }

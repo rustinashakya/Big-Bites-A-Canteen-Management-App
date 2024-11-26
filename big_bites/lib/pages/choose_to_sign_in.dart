@@ -3,7 +3,7 @@ import 'package:big_bites/pages/sign_in.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
-  MaterialApp(
+  const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: ChooseToSignIn(),
   ),
@@ -80,7 +80,7 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SignInPage()),
+                      MaterialPageRoute(builder: (context) => const SignInPage()),
                     );
                   },
                   child: const Text(
@@ -112,7 +112,7 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CreateAnAccountPage()),
+                      MaterialPageRoute(builder: (context) => const CreateAnAccountPage()),
                     );
                   },
                   child: const Text(

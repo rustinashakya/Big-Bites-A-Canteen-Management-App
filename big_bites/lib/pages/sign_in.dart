@@ -54,14 +54,14 @@ class _SignInPageState extends State<SignInPage> {
 
           // Welcome Text
           Positioned(
-            top: deviceHeight * 0.35,
+            top: deviceHeight * 0.34,
             left: 0,
             right: 0,
             child: const Center(
               child: Column(
                 children: [
                   Text(
-                    'Welcome!',
+                    'Welcome Back!',
                     style: TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.bold,
@@ -69,9 +69,22 @@ class _SignInPageState extends State<SignInPage> {
                       color: Color(0xFFFFC01E),
                     ),
                   ),
-                  SizedBox(height: 0.0),
+                ],
+              ),
+            ),
+          ),
+
+
+          // sign In Text
+          Positioned(
+            top: deviceHeight * 0.423,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Column(
+                children: [
                   Text(
-                    'Sign In Here',
+                    'Sign In',
                     style: TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w600,
@@ -86,7 +99,7 @@ class _SignInPageState extends State<SignInPage> {
 
           // Text Fields
           Positioned(
-            top: deviceHeight * 0.475, 
+            top: deviceHeight * 0.5, 
             left: 20.0,
             right: 20.0,
             child: Column(
@@ -118,7 +131,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                 ),
 
-                const SizedBox(height: 20.0),
+                SizedBox(height: 20.0),
 
                 // Password Text Field
                 TextField(

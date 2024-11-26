@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(
-  MaterialApp(
+  const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: AddMenu(),
   ),
@@ -27,9 +27,9 @@ class _AddMenu extends State<AddMenu> {
         Positioned(
           top: deviceHeight * 0.1, // Vertical position (10% of the screen height)
           left: 25, // Horizontal position from the left edge
-          child: Column(
+          child: const Column(
             crossAxisAlignment: CrossAxisAlignment.start, // Aligns content to the left
-            children: const [
+            children: [
               Text(
                 'Add Menu',
                 style: TextStyle(

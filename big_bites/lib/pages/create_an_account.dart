@@ -270,7 +270,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
 
           // Create An Account Button
           Positioned(
-            top: deviceHeight * 0.765, // Positioned at 80% height
+            top: deviceHeight * 0.725, 
             left: 20.0,
             right: 20.0,
             child: ElevatedButton(
@@ -288,7 +288,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => WelcomePage()),
+                  MaterialPageRoute(builder: (context) => const WelcomePage()),
                 );
               },
               child: const Text(
@@ -325,7 +325,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SignInPage()),
+                        MaterialPageRoute(builder: (context) => const SignInPage()),
                       );
                     },
                     child: const Text(
