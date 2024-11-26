@@ -10,6 +10,8 @@ void main() => runApp(
 );
 
 class ChooseToSignIn extends StatefulWidget {
+  const ChooseToSignIn({super.key});
+
   @override
   State<ChooseToSignIn> createState() => _ChooseToSignInState();
 }
@@ -20,7 +22,7 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
     final deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
           // Top Surface Image
@@ -28,7 +30,7 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
             top: 0,
             left: 0,
             right: 0,
-            child: Container(
+            child: SizedBox(
               height: deviceHeight * 0.3,
               child: Image.asset(
                 'assets/images/choose_to_sign_in/top_surface.png',
@@ -65,7 +67,7 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                 // Sign In Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFF1B136), 
+                    backgroundColor: const Color(0xFFF1B136), 
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                       side: BorderSide(
@@ -73,7 +75,7 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                         width: 1.0,
                       ),
                     ),
-                    minimumSize: Size(double.infinity, 50), 
+                    minimumSize: const Size(double.infinity, 50), 
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -81,7 +83,7 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                       MaterialPageRoute(builder: (context) => SignInPage()),
                     );
                   },
-                  child: Text(
+                  child: const Text(
                     'Sign In',
                     style: TextStyle(
                       fontFamily: 'Inter', 
@@ -92,12 +94,12 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                   ),
                 ),
 
-                SizedBox(height: 15.0), 
+                const SizedBox(height: 15.0), 
 
                 // Create an Account Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFFFFFFF), 
+                    backgroundColor: const Color(0xFFFFFFFF), 
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                       side: BorderSide(
@@ -105,7 +107,7 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                         width: 1.0,
                       ),
                     ),
-                    minimumSize: Size(double.infinity, 50), 
+                    minimumSize: const Size(double.infinity, 50), 
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -113,7 +115,7 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                       MaterialPageRoute(builder: (context) => CreateAnAccountPage()),
                     );
                   },
-                  child: Text(
+                  child: const Text(
                     'Create an Account',
                     style: TextStyle(
                       fontFamily: 'Inter', 

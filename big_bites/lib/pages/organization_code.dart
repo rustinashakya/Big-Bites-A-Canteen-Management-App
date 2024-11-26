@@ -9,6 +9,8 @@ void main() => runApp(
 );
 
 class OrganizationCode extends StatefulWidget {
+  const OrganizationCode({super.key});
+
   @override
   State<OrganizationCode> createState() => _OrganizationCodeState();
 }
@@ -17,23 +19,23 @@ class _OrganizationCodeState extends State<OrganizationCode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
           Column(
             children: [
               // First Image
-              Container(
+              SizedBox(
                 width: double.infinity,
                 child: Image.asset(
                   'assets/images/organization_code/top_surface.png',
                   fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(height: 8.0),
+              const SizedBox(height: 8.0),
 
               // Second Image
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height * 0.4,
                 child: Image.asset(
@@ -57,9 +59,9 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                   child: TextField(
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xFFF5F5F5), // Background color
+                      fillColor: const Color(0xFFF5F5F5), // Background color
                       hintText: 'Add Your Organization Code ',
-                      hintStyle: TextStyle(
+                      hintStyle: const TextStyle(
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w400, // Regular weight
                         fontSize: 18,
@@ -67,13 +69,13 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15.0),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0xFFD9D9D9),
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15.0),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0xFFD9D9D9),
                         ),
                       ),
@@ -81,13 +83,13 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                   ),
                 ),
 
-                SizedBox(height: 16.0), // Gap between buttons
+                const SizedBox(height: 16.0), // Gap between buttons
 
                 // Let's go Button 
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     // Background color
-                    backgroundColor: Color(0xFFF1B136),
+                    backgroundColor: const Color(0xFFF1B136),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                       side: BorderSide(
@@ -95,7 +97,7 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                         width: 2.0,
                       ),
                     ),
-                    minimumSize: Size(double.infinity, 60), // Full-width button
+                    minimumSize: const Size(double.infinity, 60), // Full-width button
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -103,7 +105,7 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                       MaterialPageRoute(builder: (context) => ChooseToSignIn()),
                     );
                   },
-                  child: Text(
+                  child: const Text(
                     "Let's Go",
                     style: TextStyle(
                       fontFamily: 'Inter', // Custom font

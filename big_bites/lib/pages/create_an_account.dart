@@ -3,6 +3,8 @@ import 'package:big_bites/pages/welcome.dart';
 import 'package:flutter/material.dart';
 
 class CreateAnAccountPage extends StatefulWidget {
+  const CreateAnAccountPage({super.key});
+
   @override
   State<CreateAnAccountPage> createState() => _CreateAnAccountPageState();
 }
@@ -16,7 +18,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
     final deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
           // Top Surface Image
@@ -24,7 +26,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
             top: deviceHeight * 0.0, 
             left: 0,
             right: 0,
-            child: Container(
+            child: SizedBox(
               width: double.infinity,
               height: deviceHeight * 0.2, 
               child: Image.asset(
@@ -39,7 +41,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
             top: deviceHeight * 0.225,
             left: 0,
             right: 0,
-            child: Center(
+            child: const Center(
               child: Column(
                 children: [
                   Text(
@@ -68,9 +70,9 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                 TextField(
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xFFF5F5F5),
+                    fillColor: const Color(0xFFF5F5F5),
                     hintText: 'Email',
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
@@ -78,28 +80,28 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
                   ),
                 ),
 
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
 
                 // First Name Field
                 TextField(
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xFFF5F5F5),
+                    fillColor: const Color(0xFFF5F5F5),
                     hintText: 'Full Name',
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
@@ -107,13 +109,13 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
@@ -149,15 +151,15 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                 //   ),
                 // ),
 
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
 
                 // User Type Field
                 TextField(
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xFFF5F5F5),
+                    fillColor: const Color(0xFFF5F5F5),
                     hintText: 'User Type',
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
@@ -165,29 +167,29 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
                   ),
                 ),
                 
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
 
                 // Password Text Field
                 TextField(
                   obscureText: !_isPasswordVisible,
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xFFF5F5F5),
+                    fillColor: const Color(0xFFF5F5F5),
                     hintText: 'Password',
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
@@ -195,13 +197,13 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
@@ -220,16 +222,16 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
 
                 // Confirm Password Text Field
                 TextField(
                   obscureText: !_isPasswordVisible,
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xFFF5F5F5),
+                    fillColor: const Color(0xFFF5F5F5),
                     hintText: 'Confirm Password',
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
@@ -237,13 +239,13 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
@@ -273,7 +275,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
             right: 20.0,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFFF1B136),
+                backgroundColor: const Color(0xFFF1B136),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0),
                   side: BorderSide(
@@ -281,7 +283,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     width: 1.0,
                   ),
                 ),
-                minimumSize: Size(double.infinity, 50), // Full-width button
+                minimumSize: const Size(double.infinity, 50), // Full-width button
               ),
               onPressed: () {
                 Navigator.push(
@@ -289,7 +291,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   MaterialPageRoute(builder: (context) => WelcomePage()),
                 );
               },
-              child: Text(
+              child: const Text(
                 'Create An Account',
                 style: TextStyle(
                   fontFamily: 'Inter',
@@ -310,7 +312,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Already have an Account?",
                     style: TextStyle(
                       fontFamily: 'Inter',
@@ -326,7 +328,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                         MaterialPageRoute(builder: (context) => SignInPage()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'Sign In',
                       style: TextStyle(
                         fontFamily: 'Inter',

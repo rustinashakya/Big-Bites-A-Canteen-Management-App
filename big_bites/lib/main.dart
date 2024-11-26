@@ -1,4 +1,6 @@
+import 'package:big_bites/pages/addmenu.dart';
 import 'package:big_bites/pages/create_an_account.dart';
+import 'package:big_bites/pages/organization_code.dart';
 import 'package:big_bites/pages/sign_in.dart';
 import 'package:big_bites/pages/splash.dart';
 import 'package:big_bites/pages/welcome.dart';
@@ -20,9 +22,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Splash(),
+      // home: const Splash(),
       // home: CreateAnAccountPage(),
       // home: WelcomePage(),
+      //home: OrganizationCode(),
+      home: AddMenu(),
     );
   }
 }
