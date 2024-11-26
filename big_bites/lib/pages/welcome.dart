@@ -30,7 +30,7 @@ class _WelcomePageState extends State<WelcomePage> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  "Hey Aman DTS",
+                  "Hey Ashmi Chaudhary",
                   style: TextStyle(
                     fontFamily: 'Inter',
                     fontWeight: FontWeight.bold,
