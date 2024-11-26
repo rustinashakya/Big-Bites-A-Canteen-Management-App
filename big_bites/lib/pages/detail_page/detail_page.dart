@@ -23,53 +23,52 @@ class _DetailPageState extends State<DetailPage> {
             IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_outlined)),
             Center(child: Image.asset(Images.doubleCheese)),
             NameReviewFavoriteWidget(),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10),
             Text(
               demoDetailInfo,
               style: Fonts.bodyMediumInter,
               textAlign: TextAlign.justify,
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10),
             Text(
               "Quantity",
               style: Fonts.bodyMediumInter,
               textAlign: TextAlign.justify,
             ),
-            SizedBox(
-              height: 10,
+            SizedBox(height: 10),
+            QuantityAddSubWidget(),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    // Logic for the first button
+                    print("Button 1 clicked");
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor:
+                        Colors.yellow, // Set background color to yellow
+                  ),
+                  child: Text("Rs 300"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // Logic for the second button
+                    print("Button 2 clicked");
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red, // Set background color to red
+                  ),
+                  child: Text(
+                    "Add",
+                  ),
+                ),
+              ],
             ),
-            QuantityAddSubWidget()
           ],
         ),
       ),
-
-      // Stack(
-      //   children: [
-      //     Positioned(
-      //       left: 22, // X position
-      //       top: 499, // Y position
-      //       width: 392, // Width
-      //       height: 143, // Height
-      //       child: Container(
-      //         alignment: Alignment.center,
-      //         child: Text(
-      //           'A double cheeseburger has two beef patties, each with melted cheese, in a soft bun, often with toppings like lettuce, tomato, pickles, and condiments. It’s a hearty, flavorful burger option.',
-      //           style: TextStyle(
-      //             fontFamily: 'Inter',
-      //             fontWeight: FontWeight.w500, // Medium weight
-      //             fontSize: 18,
-      //             color: Color(0xFF1E1E1E), // Hex color #1E1E1E
-      //           ),
-      //           textAlign: TextAlign.center,
-      //         ),
-      //       ),
-      //     ),
-      //   ],
-      // ),
     );
   }
 }

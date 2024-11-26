@@ -1,8 +1,5 @@
-import 'package:big_bites/pages/create_an_account.dart';
+import 'package:big_bites/pages/dashboard_page/dashboard_page.dart';
 import 'package:big_bites/pages/detail_page/detail_page.dart';
-import 'package:big_bites/pages/sign_in.dart';
-import 'package:big_bites/pages/splash.dart';
-import 'package:big_bites/pages/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,7 +20,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         // home: Splash(),
-        home: DetailPage()
+        home: const DashboardPage()
         // home: CreateAnAccountPage(),
         // home: WelcomePage(),
         );
