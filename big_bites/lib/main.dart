@@ -1,4 +1,5 @@
 import 'package:big_bites/pages/create_an_account.dart';
+import 'package:big_bites/pages/detail_page/detail_page.dart';
 import 'package:big_bites/pages/sign_in.dart';
 import 'package:big_bites/pages/splash.dart';
 import 'package:big_bites/pages/welcome.dart';
@@ -15,15 +16,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Big Bites - A Canteen Management App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: Splash(),
-      // home: CreateAnAccountPage(),
-      // home: WelcomePage(),
-    );
+        title: 'Big Bites - A Canteen Management App',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        // home: Splash(),
+        home: DetailPage()
+        // home: CreateAnAccountPage(),
+        // home: WelcomePage(),
+        );
   }
 }
-
