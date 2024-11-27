@@ -1,21 +1,43 @@
 import 'package:big_bites/pages/create_an_account.dart';
 import 'package:big_bites/pages/welcome.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class SignInPage extends StatefulWidget {
+  const SignInPage({super.key});
+
   @override
   State<SignInPage> createState() => _SignInPageState();
 }
 
 class _SignInPageState extends State<SignInPage> {
+  final TextEditingController email = TextEditingController();
+  final TextEditingController password = TextEditingController();
   bool _isPasswordVisible = false;
+
+  Future<void> signIn() async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email.text.trim(),
+        password: password.text.trim(),
+      );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => WelcomePage()),
+      );
+    } on FirebaseAuthException catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(e.message ?? "An error occurred")),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     final deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
           // Top Surface Image
@@ -23,7 +45,7 @@ class _SignInPageState extends State<SignInPage> {
             top: deviceHeight * 0.0, 
             left: 0,
             right: 0,
-            child: Container(
+            child: SizedBox(
               width: double.infinity,
               height: deviceHeight * 0.2, 
               child: Image.asset(
@@ -52,14 +74,14 @@ class _SignInPageState extends State<SignInPage> {
 
           // Welcome Text
           Positioned(
-            top: deviceHeight * 0.35,
+            top: deviceHeight * 0.34,
             left: 0,
             right: 0,
-            child: Center(
+            child: const Center(
               child: Column(
                 children: [
                   Text(
-                    'Welcome!',
+                    'Welcome Back!',
                     style: TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.bold,
@@ -67,9 +89,22 @@ class _SignInPageState extends State<SignInPage> {
                       color: Color(0xFFFFC01E),
                     ),
                   ),
-                  SizedBox(height: 0.0),
+                ],
+              ),
+            ),
+          ),
+
+
+          // sign In Text
+          Positioned(
+            top: deviceHeight * 0.423,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Column(
+                children: [
                   Text(
-                    'Sign In Here',
+                    'Sign In',
                     style: TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w600,
@@ -84,18 +119,19 @@ class _SignInPageState extends State<SignInPage> {
 
           // Text Fields
           Positioned(
-            top: deviceHeight * 0.475, 
+            top: deviceHeight * 0.5, 
             left: 20.0,
             right: 20.0,
             child: Column(
               children: [
                 // Email Text Field
                 TextField(
+                  controller: email,
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xFFF5F5F5),
+                    fillColor: const Color(0xFFF5F5F5),
                     hintText: 'Email',
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
@@ -103,13 +139,13 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
@@ -120,12 +156,13 @@ class _SignInPageState extends State<SignInPage> {
 
                 // Password Text Field
                 TextField(
+                  controller: password,
                   obscureText: !_isPasswordVisible,
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xFFF5F5F5),
+                    fillColor: const Color(0xFFF5F5F5),
                     hintText: 'Password',
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
@@ -133,13 +170,13 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFFD9D9D9),
                       ),
                     ),
@@ -169,7 +206,7 @@ class _SignInPageState extends State<SignInPage> {
             right: 20.0,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFFF1B136),
+                backgroundColor: const Color(0xFFF1B136),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0),
                   side: BorderSide(
@@ -177,14 +214,9 @@ class _SignInPageState extends State<SignInPage> {
                     width: 1.0,
                   ),
                 ),
-                minimumSize: Size(double.infinity, 50), // Full-width button
+                minimumSize: const Size(double.infinity, 50), // Full-width button
               ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => WelcomePage()),
-                );
-              },
+              onPressed: (()=>signIn()),
               child: Text(
                 'Sign In',
                 style: TextStyle(
@@ -207,7 +239,7 @@ class _SignInPageState extends State<SignInPage> {
                 onPressed: () {
                   // Add functionality
                 },
-                child: Text(
+                child: const Text(
                   'Forgot Password?',
                   style: TextStyle(
                     fontFamily: 'Inter',
@@ -229,7 +261,7 @@ class _SignInPageState extends State<SignInPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Don't have an Account?",
                     style: TextStyle(
                       fontFamily: 'Inter',
@@ -245,7 +277,7 @@ class _SignInPageState extends State<SignInPage> {
                         MaterialPageRoute(builder: (context) => CreateAnAccountPage()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'Create One',
                       style: TextStyle(
                         fontFamily: 'Inter',

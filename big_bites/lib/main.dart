@@ -1,8 +1,11 @@
 import 'package:big_bites/pages/dashboard_page/dashboard_page.dart';
 import 'package:big_bites/pages/detail_page/detail_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
