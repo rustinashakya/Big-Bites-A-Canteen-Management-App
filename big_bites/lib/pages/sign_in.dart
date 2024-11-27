@@ -1,5 +1,6 @@
 import 'package:big_bites/pages/create_an_account.dart';
 import 'package:big_bites/pages/welcome.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class SignInPage extends StatefulWidget {
@@ -8,7 +9,26 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+  final TextEditingController email = TextEditingController();
+  final TextEditingController password = TextEditingController();
   bool _isPasswordVisible = false;
+
+  Future<void> signIn() async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email.text.trim(),
+        password: password.text.trim(),
+      );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => WelcomePage()),
+      );
+    } on FirebaseAuthException catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(e.message ?? "An error occurred")),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -104,6 +124,7 @@ class _SignInPageState extends State<SignInPage> {
               children: [
                 // Email Text Field
                 TextField(
+                  controller: email,
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Color(0xFFF5F5F5),
@@ -133,6 +154,7 @@ class _SignInPageState extends State<SignInPage> {
 
                 // Password Text Field
                 TextField(
+                  controller: password,
                   obscureText: !_isPasswordVisible,
                   decoration: InputDecoration(
                     filled: true,
@@ -192,12 +214,7 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 minimumSize: Size(double.infinity, 50), // Full-width button
               ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => WelcomePage()),
-                );
-              },
+              onPressed: (()=>signIn()),
               child: Text(
                 'Sign In',
                 style: TextStyle(

@@ -2,9 +2,12 @@ import 'package:big_bites/pages/create_an_account.dart';
 import 'package:big_bites/pages/sign_in.dart';
 import 'package:big_bites/pages/splash.dart';
 import 'package:big_bites/pages/welcome.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
