@@ -3,13 +3,6 @@ import 'package:big_bites/pages/create_an_account.dart';
 import 'package:big_bites/pages/sign_in.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-  MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: OrganizationCode(),
-  ),
-);
-
 class OrganizationCode extends StatefulWidget {
   const OrganizationCode({super.key});
 
@@ -52,13 +45,13 @@ class _OrganizationCodeState extends State<OrganizationCode> {
 
           // Text Fields
           Positioned(
-            top: deviceHeight * 0.768, 
+            top: deviceHeight * 0.768,
             left: 20.0,
             right: 20.0,
             child: Column(
               children: [
                 // text field
-               SizedBox(
+                SizedBox(
                   width: double.infinity,
                   child: TextField(
                     decoration: InputDecoration(
@@ -89,7 +82,7 @@ class _OrganizationCodeState extends State<OrganizationCode> {
 
                 SizedBox(height: 16.0), // Gap between buttons
 
-                // Let's go Button 
+                // Let's go Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     // Background color
@@ -97,25 +90,25 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                       side: BorderSide(
-                        color: Colors.black.withOpacity(0.25), 
+                        color: Colors.black.withOpacity(0.25),
                         width: 1.0,
                       ),
                     ),
                     minimumSize: Size(double.infinity, 60), // Full-width button
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ChooseToSignIn()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => ChooseToSignIn()),
+                    // );
                   },
                   child: const Text(
                     "Let's Go",
                     style: TextStyle(
-                      fontFamily: 'Inter', 
-                      fontWeight: FontWeight.w400, 
-                      fontSize: 18, 
-                      color: Colors.black, 
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 18,
+                      color: Colors.black,
                     ),
                   ),
                 ),
@@ -127,6 +120,3 @@ class _OrganizationCodeState extends State<OrganizationCode> {
     );
   }
 }
-
-
-

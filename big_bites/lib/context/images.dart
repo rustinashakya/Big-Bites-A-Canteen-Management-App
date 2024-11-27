@@ -9,14 +9,16 @@ class Images {
 
 class AppIcons {
   static const String svgsPath = 'assets/icons/';
-  static const String homeSelected = '${svgsPath}home_selected.svg';
-  static const String homeUnselected = '${svgsPath}home_unselected.svg';
-  static const String cartSelected = '${svgsPath}cart_selected.svg';
-  static const String cartUnelected = '${svgsPath}cart_unselected.svg';
-  static const String favoriteSelected = '${svgsPath}favorite_selected.svg';
-  static const String favoriteUnselected = '${svgsPath}favorite_unselected.svg';
-  static const String menuSelected = '${svgsPath}menu_selected.svg';
-  static const String menuUnselected = '${svgsPath}menu_unselected.svg';
-  static const String trackerSelected = '${svgsPath}tracker_selected.svg';
-  static const String trackerUnselected = '${svgsPath}tracker_unselected.svg';
+  static const String homeSelected = '${svgsPath}home_selected.png';
+  static const String homeUnselected = '${svgsPath}home_unselected.png';
+  static const String cartSelected = '${svgsPath}cart_selected.png';
+  static const String cartUnselected = '${svgsPath}cart_unselected.png';
+  static const String favoriteSelected = '${svgsPath}favorite_selected.png';
+  static const String favoriteUnselected = '${svgsPath}favorite_unselected.png';
+  static const String menuSelected = '${svgsPath}menu_selected.png';
+  static const String menuUnselected = '${svgsPath}menu_unselected.png';
+  static const String trackerSelected = '${svgsPath}tracker_selected.png';
+  static const String trackerUnselected = '${svgsPath}tracker_unselected.png';
+  static const String searchIcon = '${svgsPath}search_icon.png';
+  static const String filterIcon = '${svgsPath}filter_icon.png';
 }

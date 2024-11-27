@@ -45,53 +45,37 @@ class _DashboardPageState extends State<DashboardPage> {
             });
           },
           items: [
-            BottomNavigationBarItem(
-                icon:
-
-                    // currentIndex == 0
-                    //     ? SvgPicture.asset(
-                    //         AppIcons.homeSelected,
-                    //       )
-                    //     : SvgPicture.asset(
-                    //         'assets/icons/home_icon.svg',
-                    //         height: 15,
-                    //         width: 15,
-                    //       ),
-                    Icon(
-                  currentIndex == 0 ? Icons.home : Icons.home_outlined,
-                  color: Colors.black,
-                ),
-                label: "",
-                backgroundColor: AppColors.primaryColor),
-            const BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.menu_outlined,
-                  color: Colors.black,
-                ),
-                label: "",
-                backgroundColor: AppColors.primaryColor),
-            const BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.shopping_cart_outlined,
-                  color: Colors.black,
-                ),
-                label: "",
-                backgroundColor: AppColors.primaryColor),
-            const BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.timer,
-                  color: Colors.black,
-                ),
-                label: "",
-                backgroundColor: AppColors.primaryColor),
-            const BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.favorite_border,
-                  color: Colors.black,
-                ),
-                label: "",
-                backgroundColor: AppColors.primaryColor),
+            _bottomNavigationBarItem(
+                displayIcon: currentIndex == 0
+                    ? AppIcons.homeSelected
+                    : AppIcons.homeUnselected),
+            _bottomNavigationBarItem(
+                displayIcon: currentIndex == 1
+                    ? AppIcons.menuSelected
+                    : AppIcons.menuUnselected),
+            _bottomNavigationBarItem(
+                displayIcon: currentIndex == 2
+                    ? AppIcons.cartSelected
+                    : AppIcons.cartUnselected),
+            _bottomNavigationBarItem(
+                displayIcon: currentIndex == 3
+                    ? AppIcons.trackerSelected
+                    : AppIcons.trackerUnselected),
+            _bottomNavigationBarItem(
+                displayIcon: currentIndex == 4
+                    ? AppIcons.favoriteSelected
+                    : AppIcons.favoriteUnselected),
           ]),
+    );
+  }
+
+  BottomNavigationBarItem _bottomNavigationBarItem(
+      {required String displayIcon}) {
+    return BottomNavigationBarItem(
+      label: '',
+      icon: Image.asset(
+        displayIcon,
+      ),
     );
   }
 }
