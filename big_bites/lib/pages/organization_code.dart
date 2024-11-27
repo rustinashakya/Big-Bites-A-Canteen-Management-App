@@ -47,7 +47,7 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                   fit: BoxFit.contain,
                 ),
               ),
-            ),
+            ],
           ),
 
           // Text Fields
