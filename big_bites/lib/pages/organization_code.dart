@@ -11,6 +11,8 @@ void main() => runApp(
 );
 
 class OrganizationCode extends StatefulWidget {
+  const OrganizationCode({super.key});
+
   @override
   State<OrganizationCode> createState() => _OrganizationCodeState();
 }
@@ -21,39 +23,31 @@ class _OrganizationCodeState extends State<OrganizationCode> {
     final deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
-          // Top Surface Image
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-              height: deviceHeight * 0.3,
-              child: Image.asset(
-                'assets/images/choose_to_sign_in/top_surface.png',
-                fit: BoxFit.cover,
+          Column(
+            children: [
+              // First Image
+              Container(
                 width: double.infinity,
+                child: Image.asset(
+                  'assets/images/organization_code/top_surface.png',
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-          ),
+              SizedBox(height: 8.0),
 
-          // Big Bites Logo
-          Positioned(
-            top: deviceHeight * 0.27, 
-            left: 0,
-            right: 0,
-            child: Center(
-              child: SizedBox(
-                width: 350, 
-                height: 350, 
+              // Second Image
+              Container(
+                width: double.infinity,
+                height: MediaQuery.of(context).size.height * 0.4,
                 child: Image.asset(
                   'assets/images/splash/BigBites.png',
                   fit: BoxFit.contain,
                 ),
               ),
-            ),
+            ],
           ),
 
           // Text Fields
@@ -63,47 +57,43 @@ class _OrganizationCodeState extends State<OrganizationCode> {
             right: 20.0,
             child: Column(
               children: [
-                // Enter Organization Code Text Field
-                TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xFFF5F5F5),
-                    hintText: 'Add Organization Code',
-                    hintStyle: TextStyle(
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
-                      color: Colors.grey,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                      borderSide: BorderSide(
-                        color: Color(0xFFD9D9D9),
+                // text field
+               SizedBox(
+                  width: double.infinity,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Color(0xFFF5F5F5), // Background color
+                      hintText: 'Add Your Organization Code ',
+                      hintStyle: TextStyle(
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w400, // Regular weight
+                        fontSize: 18,
+                        color: Colors.grey,
                       ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                      borderSide: BorderSide(
-                        color: Color(0xFFD9D9D9),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide: BorderSide(
+                          color: Color(0xFFD9D9D9),
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide: BorderSide(
+                          color: Color(0xFFD9D9D9),
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ],
-            ),
-          ),
 
-          // Buttons
-          Positioned(
-            top: deviceHeight * 0.85, 
-            left: 20.0,
-            right: 20.0,
-            child: Column(
-              children: [
-                // Create an Account Button
+                SizedBox(height: 16.0), // Gap between buttons
+
+                // Let's go Button 
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFF1B136), 
+                    // Background color
+                    backgroundColor: Color(0xFFF1B136),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                       side: BorderSide(
@@ -111,7 +101,7 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                         width: 1.0,
                       ),
                     ),
-                    minimumSize: Size(double.infinity, 50), 
+                    minimumSize: Size(double.infinity, 60), // Full-width button
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -119,7 +109,7 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                       MaterialPageRoute(builder: (context) => ChooseToSignIn()),
                     );
                   },
-                  child: Text(
+                  child: const Text(
                     "Let's Go",
                     style: TextStyle(
                       fontFamily: 'Inter', 

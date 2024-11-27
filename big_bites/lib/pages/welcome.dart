@@ -3,6 +3,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatefulWidget {
+  const WelcomePage({super.key});
+
   @override
   _WelcomePageState createState() => _WelcomePageState();
 }
@@ -13,7 +15,7 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
           // Top Surface Image
@@ -29,7 +31,7 @@ class _WelcomePageState extends State<WelcomePage> {
           ),
 
           // Center Texts
-          Center(
+          const Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
