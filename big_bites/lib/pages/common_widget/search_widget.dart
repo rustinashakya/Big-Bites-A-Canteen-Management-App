@@ -31,6 +31,7 @@ class _SearchWidgetState extends State<SearchWidget> {
         name: 'search',
         decoration: InputDecoration(
           hintText: 'Search',
+          contentPadding: EdgeInsets.only(left: 20),
           fillColor: Colors.white,
           filled: true,
           hintStyle: Fonts.bodyLargeInter,

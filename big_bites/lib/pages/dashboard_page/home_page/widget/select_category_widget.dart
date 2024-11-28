@@ -15,7 +15,7 @@ class _SelectCategoryWidgetState extends State<SelectCategoryWidget> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100,
+      height: 85,
       child: ListView.builder(
           itemCount: widget.categories.length,
           scrollDirection: Axis.horizontal,
@@ -27,7 +27,7 @@ class _SelectCategoryWidgetState extends State<SelectCategoryWidget> {
                 widget.categories[index],
                 style: Fonts.bodyLargeInter,
               ).px(5),
-            ).py(20).px(12);
+            ).py(20).px(8);
           }),
     );
   }

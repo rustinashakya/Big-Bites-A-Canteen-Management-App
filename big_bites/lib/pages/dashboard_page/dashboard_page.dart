@@ -6,7 +6,6 @@ import 'package:big_bites/pages/dashboard_page/home_page/home_page.dart';
 import 'package:big_bites/pages/dashboard_page/menu_page/menu_page.dart';
 import 'package:big_bites/pages/dashboard_page/track_order_page/track_order_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -21,7 +20,7 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
         child: IndexedStack(
           index: currentIndex,
           children: const [

@@ -21,4 +21,14 @@ class AppIcons {
   static const String trackerUnselected = '${svgsPath}tracker_unselected.png';
   static const String searchIcon = '${svgsPath}search_icon.png';
   static const String filterIcon = '${svgsPath}filter_icon.png';
+  static const String doubleCheeseBurger =
+      '${svgsPath}double_cheese_burger.png';
+  static const String friedChickenBurger =
+      '${svgsPath}fried_chicken_burger.png';
+  static const String samosaWithChutney = '${svgsPath}samosa_with_chutney.png';
+  static const String baconSandwich = '${svgsPath}bacon_sandwich.png';
+  static const String buffJholMomo = '${svgsPath}buff_jhol_momo.png';
+  static const String chickenChowmein = '${svgsPath}chicken_chowmein.png';
+  static const String puriTarkari = '${svgsPath}puri_tarkari.png';
+  static const String steamChickenMomo = '${svgsPath}steam_chicken_momo.png';
 }

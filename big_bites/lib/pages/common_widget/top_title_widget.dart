@@ -14,9 +14,12 @@ class TopTitleWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            title,
-            style: Fonts.topTitleLargeKaushan,
+          Flexible(
+            child: Text(
+              title,
+              overflow: TextOverflow.ellipsis,
+              style: Fonts.topTitleLargeKaushan,
+            ),
           ),
           SizedBox(
               height: 50,
