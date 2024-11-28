@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatefulWidget {
+  const WelcomePage({super.key});
+
   @override
   _WelcomePageState createState() => _WelcomePageState();
 }
@@ -13,7 +14,7 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
           // Top Surface Image
@@ -35,15 +36,15 @@ class _WelcomePageState extends State<WelcomePage> {
               children: [
                 Text(
                   ("Hey ${user!.email}"),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'Inter',
                     fontWeight: FontWeight.bold,
                     fontSize: 28,
                     color: Color(0xFFFFFFFF),
                   ),
                 ),
-                SizedBox(height: 10), // Space between the texts
-                Text(
+                const SizedBox(height: 10), // Space between the texts
+                const Text(
                   "Welcome to Big Bites",
                   style: TextStyle(
                     fontFamily: 'Inter',

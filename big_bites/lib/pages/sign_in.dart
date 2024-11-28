@@ -23,7 +23,7 @@ class _SignInPageState extends State<SignInPage> {
       );
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => WelcomePage()),
+        MaterialPageRoute(builder: (context) => const WelcomePage()),
       );
     } on FirebaseAuthException catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -100,7 +100,7 @@ class _SignInPageState extends State<SignInPage> {
             top: deviceHeight * 0.423,
             left: 0,
             right: 0,
-            child: Center(
+            child: const Center(
               child: Column(
                 children: [
                   Text(
@@ -152,7 +152,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                 ),
 
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
 
                 // Password Text Field
                 TextField(
@@ -217,7 +217,7 @@ class _SignInPageState extends State<SignInPage> {
                 minimumSize: const Size(double.infinity, 50), // Full-width button
               ),
               onPressed: (()=>signIn()),
-              child: Text(
+              child: const Text(
                 'Sign In',
                 style: TextStyle(
                   fontFamily: 'Inter',
@@ -274,7 +274,7 @@ class _SignInPageState extends State<SignInPage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => CreateAnAccountPage()),
+                        MaterialPageRoute(builder: (context) => const CreateAnAccountPage()),
                       );
                     },
                     child: const Text(

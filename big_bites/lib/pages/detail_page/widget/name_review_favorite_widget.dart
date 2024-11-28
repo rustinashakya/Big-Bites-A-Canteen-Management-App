@@ -15,13 +15,13 @@ class NameReviewFavoriteWidget extends StatelessWidget {
               "Double Cheese Burger",
               style: Fonts.titleLargeInter,
             ),
-            Icon(
+            const Icon(
               Icons.favorite,
               color: Colors.red,
             ),
           ],
         ),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(

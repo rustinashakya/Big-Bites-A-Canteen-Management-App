@@ -7,7 +7,7 @@ class FavoritePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       child: Column(
         children: [
           TopTitleWidget(
@@ -16,6 +16,5 @@ class FavoritePage extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }

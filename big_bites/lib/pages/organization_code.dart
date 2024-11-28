@@ -1,10 +1,8 @@
 import 'package:big_bites/pages/choose_to_sign_in.dart';
-import 'package:big_bites/pages/create_an_account.dart';
-import 'package:big_bites/pages/sign_in.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
-  MaterialApp(
+  const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: OrganizationCode(),
   ),
@@ -29,17 +27,17 @@ class _OrganizationCodeState extends State<OrganizationCode> {
           Column(
             children: [
               // First Image
-              Container(
+              SizedBox(
                 width: double.infinity,
                 child: Image.asset(
                   'assets/images/organization_code/top_surface.png',
                   fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(height: 8.0),
+              const SizedBox(height: 8.0),
 
               // Second Image
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height * 0.4,
                 child: Image.asset(
@@ -63,9 +61,9 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                   child: TextField(
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xFFF5F5F5), // Background color
+                      fillColor: const Color(0xFFF5F5F5), // Background color
                       hintText: 'Add Your Organization Code ',
-                      hintStyle: TextStyle(
+                      hintStyle: const TextStyle(
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w400, // Regular weight
                         fontSize: 18,
@@ -73,13 +71,13 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15.0),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0xFFD9D9D9),
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15.0),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0xFFD9D9D9),
                         ),
                       ),
@@ -87,13 +85,13 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                   ),
                 ),
 
-                SizedBox(height: 16.0), // Gap between buttons
+                const SizedBox(height: 16.0), // Gap between buttons
 
                 // Let's go Button 
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     // Background color
-                    backgroundColor: Color(0xFFF1B136),
+                    backgroundColor: const Color(0xFFF1B136),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                       side: BorderSide(
@@ -101,12 +99,12 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                         width: 1.0,
                       ),
                     ),
-                    minimumSize: Size(double.infinity, 60), // Full-width button
+                    minimumSize: const Size(double.infinity, 60), // Full-width button
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ChooseToSignIn()),
+                      MaterialPageRoute(builder: (context) => const ChooseToSignIn()),
                     );
                   },
                   child: const Text(

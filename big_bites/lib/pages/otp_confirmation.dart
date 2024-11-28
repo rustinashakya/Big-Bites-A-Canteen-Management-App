@@ -3,19 +3,21 @@ import 'package:big_bites/pages/welcome.dart';
 import 'package:flutter/material.dart';
 
 class OTPConfirmationPage extends StatefulWidget {
+  const OTPConfirmationPage({super.key});
+
   @override
   State<OTPConfirmationPage> createState() => _OTPConfirmationPageState();
 }
 
 class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
-  bool _isPasswordVisible = false;
+  final bool _isPasswordVisible = false;
 
   @override
   Widget build(BuildContext context) {
     final deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
           // Top Surface Image
@@ -23,7 +25,7 @@ class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
             top: deviceHeight * 0.0, 
             left: 0,
             right: 0,
-            child: Container(
+            child: SizedBox(
               width: double.infinity,
               height: deviceHeight * 0.2, 
               child: Image.asset(
@@ -38,7 +40,7 @@ class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
             top: deviceHeight * 0.35,
             left: 0,
             right: 0,
-            child: Center(
+            child: const Center(
               child: Column(
                 children: [
                   Text(
@@ -59,7 +61,7 @@ class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
             top: deviceHeight * 0.4,
             left: 20.0,
             right: 20.0,
-            child: Center(
+            child: const Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center, 
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -97,7 +99,7 @@ class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
                     },
                     textAlign: TextAlign.center,
                     maxLength: 1,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
@@ -107,14 +109,14 @@ class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
                       counterText: "", // Hides the character counter
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(color: Color(0xFFE0E0E0)),
+                        borderSide: const BorderSide(color: Color(0xFFE0E0E0)),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(color: Color(0xFFF1B136)),
+                        borderSide: const BorderSide(color: Color(0xFFF1B136)),
                       ),
                       filled: true,
-                      fillColor: Color(0xFFF6F6F6),
+                      fillColor: const Color(0xFFF6F6F6),
                     ),
                   ),
                 );
@@ -130,7 +132,7 @@ class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
             right: 20.0,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFFF1B136),
+                backgroundColor: const Color(0xFFF1B136),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0),
                   side: BorderSide(
@@ -138,15 +140,15 @@ class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
                     width: 1.0,
                   ),
                 ),
-                minimumSize: Size(double.infinity, 50), // Full-width button
+                minimumSize: const Size(double.infinity, 50), // Full-width button
               ),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => WelcomePage()),
+                  MaterialPageRoute(builder: (context) => const WelcomePage()),
                 );
               },
-              child: Text(
+              child: const Text(
                 'Confirm',
                 style: TextStyle(
                   fontFamily: 'Inter',
@@ -167,7 +169,7 @@ class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Already have an Account?",
                     style: TextStyle(
                       fontFamily: 'Inter',
@@ -180,10 +182,10 @@ class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SignInPage()),
+                        MaterialPageRoute(builder: (context) => const SignInPage()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'Sign In',
                       style: TextStyle(
                         fontFamily: 'Inter',

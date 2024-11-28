@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class OrderNow extends StatefulWidget {
+  const OrderNow({super.key});
+
   @override
   _OrderNowState createState() => _OrderNowState();
 }
@@ -20,7 +22,7 @@ class _OrderNowState extends State<OrderNow> {
                 // Add your logic here, such as navigating back
                 Navigator.pop(context);
               },
-              icon: Icon(Icons.arrow_back_outlined),
+              icon: const Icon(Icons.arrow_back_outlined),
             ),
           ],
         ),

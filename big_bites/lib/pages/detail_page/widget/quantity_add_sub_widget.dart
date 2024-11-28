@@ -7,15 +7,15 @@ class QuantityAddSubWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(onPressed: () {}, icon: Icon(Icons.cancel_rounded)),
-        SizedBox(
+        IconButton(onPressed: () {}, icon: const Icon(Icons.cancel_rounded)),
+        const SizedBox(
           width: 30,
         ),
-        Text("1"),
-        SizedBox(
+        const Text("1"),
+        const SizedBox(
           width: 30,
         ),
-        IconButton(onPressed: () {}, icon: Icon(Icons.add_circle)),
+        IconButton(onPressed: () {}, icon: const Icon(Icons.add_circle)),
       ],
     );
   }

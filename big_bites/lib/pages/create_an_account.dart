@@ -1,6 +1,5 @@
 import 'package:big_bites/pages/otp_confirmation.dart';
 import 'package:big_bites/pages/sign_in.dart';
-import 'package:big_bites/pages/welcome.dart';
 import 'package:flutter/material.dart';
 
 class CreateAnAccountPage extends StatefulWidget {
@@ -289,7 +288,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => OTPConfirmationPage()),
+                  MaterialPageRoute(builder: (context) => const OTPConfirmationPage()),
                 );
               },
               child: const Text(

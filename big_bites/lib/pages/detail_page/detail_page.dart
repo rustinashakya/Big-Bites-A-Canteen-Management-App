@@ -5,6 +5,8 @@ import 'package:big_bites/pages/detail_page/widget/quantity_add_sub_widget.dart'
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
+  const DetailPage({super.key});
+
   @override
   _DetailPageState createState() => _DetailPageState();
 }
@@ -20,24 +22,24 @@ class _DetailPageState extends State<DetailPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_outlined)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_back_outlined)),
             Center(child: Image.asset(Images.doubleCheese)),
-            NameReviewFavoriteWidget(),
-            SizedBox(height: 10),
+            const NameReviewFavoriteWidget(),
+            const SizedBox(height: 10),
             Text(
               demoDetailInfo,
               style: Fonts.bodyMediumInter,
               textAlign: TextAlign.justify,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               "Quantity",
               style: Fonts.bodyMediumInter,
               textAlign: TextAlign.justify,
             ),
-            SizedBox(height: 10),
-            QuantityAddSubWidget(),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
+            const QuantityAddSubWidget(),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -50,7 +52,7 @@ class _DetailPageState extends State<DetailPage> {
                     backgroundColor:
                         Colors.yellow, // Set background color to yellow
                   ),
-                  child: Text("Rs 300"),
+                  child: const Text("Rs 300"),
                 ),
                 ElevatedButton(
                   onPressed: () {
@@ -60,7 +62,7 @@ class _DetailPageState extends State<DetailPage> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red, // Set background color to red
                   ),
-                  child: Text(
+                  child: const Text(
                     "Add",
                   ),
                 ),

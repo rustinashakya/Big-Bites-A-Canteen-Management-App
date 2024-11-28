@@ -1,12 +1,10 @@
 import 'package:big_bites/context/app_colors.dart';
-import 'package:big_bites/context/images.dart';
 import 'package:big_bites/pages/dashboard_page/cart_page/cart_page.dart';
 import 'package:big_bites/pages/dashboard_page/favorite_page/favorite_page.dart';
 import 'package:big_bites/pages/dashboard_page/home_page/home_page.dart';
 import 'package:big_bites/pages/dashboard_page/menu_page/menu_page.dart';
 import 'package:big_bites/pages/dashboard_page/track_order_page/track_order_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
