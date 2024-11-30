@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "897366092723",
+    "project_id": "big-bites-c4f08",
+    "storage_bucket": "big-bites-c4f08.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897366092723:android:20c8df530fbf03ddc6f9c6",
+        "android_client_info": {
+          "package_name": "com.example.big_bites"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDti0ZByxHaEE820x2MxhK-ovKs13XpBr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
