@@ -14,6 +14,8 @@ class Fonts {
       GoogleFonts.inter(fontSize: 20, fontWeight: FontWeight.normal);
   static TextStyle bodyMediumInter =
       GoogleFonts.inter(fontSize: 18, fontWeight: FontWeight.normal);
+  static TextStyle bodySmallInter =
+      GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.normal);
 }
 
 const demoDetailInfo =
