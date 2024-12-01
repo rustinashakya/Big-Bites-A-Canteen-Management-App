@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import '../../common_widget/top_title_widget.dart';
 
 class FavoritePage extends StatelessWidget {
-  const FavoritePage({super.key});
+  const FavoritePage({super.key, required this.isStaff});
+  final bool isStaff;
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +13,7 @@ class FavoritePage extends StatelessWidget {
         children: [
           TopTitleWidget(
             title: "My Favorites",
+            isStaff: isStaff,
           )
         ],
       ),
