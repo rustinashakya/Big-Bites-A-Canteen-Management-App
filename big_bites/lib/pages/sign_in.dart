@@ -40,6 +40,38 @@ class _SignInPageState extends State<SignInPage> {
       backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
+          // User Image
+          Positioned(
+            top: deviceHeight * 0.192, 
+            left: 0,
+            right: 0,
+            child: Center(
+              child: SizedBox(
+                width: 300,
+                height: 300,
+                child: Image.asset(
+                  'assets/images/sign_in/user.jpg',
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+          ),
+          // Positioned(
+          //   top: deviceHeight * 0.3, 
+          //   left: 0,
+          //   right: 0,
+          //   child: Center(
+          //     child: SizedBox(
+          //       width: 150,
+          //       height: 150,
+          //       child: Image.asset(
+          //         'assets/images/sign_in/user_image.png',
+          //         fit: BoxFit.contain,
+          //       ),
+          //     ),
+          //   ),
+          // ),
+
           // Top Surface Image
           Positioned(
             top: deviceHeight * 0.0, 
@@ -55,26 +87,9 @@ class _SignInPageState extends State<SignInPage> {
             ),
           ),
 
-          // User Image
-          Positioned(
-            top: deviceHeight * 0.2, 
-            left: 0,
-            right: 0,
-            child: Center(
-              child: SizedBox(
-                width: 130,
-                height: 130,
-                child: Image.asset(
-                  'assets/images/sign_in/user_image.png',
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-          ),
-
           // Welcome Text
           Positioned(
-            top: deviceHeight * 0.34,
+            top: deviceHeight * 0.47,
             left: 0,
             right: 0,
             child: const Center(
@@ -97,10 +112,10 @@ class _SignInPageState extends State<SignInPage> {
 
           // sign In Text
           Positioned(
-            top: deviceHeight * 0.423,
-            left: 0,
-            right: 0,
-            child: Center(
+            top: deviceHeight * 0.225,
+            left: 20.0,
+            right: 20.0,
+            // child: Center(
               child: Column(
                 children: [
                   Text(
@@ -114,12 +129,12 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                 ],
               ),
-            ),
+            // ),
           ),
 
           // Text Fields
           Positioned(
-            top: deviceHeight * 0.5, 
+            top: deviceHeight * 0.543, 
             left: 20.0,
             right: 20.0,
             child: Column(
@@ -152,7 +167,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                 ),
 
-                SizedBox(height: 20.0),
+                SizedBox(height: 15.0),
 
                 // Password Text Field
                 TextField(
@@ -201,7 +216,7 @@ class _SignInPageState extends State<SignInPage> {
 
           // Sign In Button
           Positioned(
-            top: deviceHeight * 0.68, // Positioned at 80% height
+            top: deviceHeight * 0.725, // Positioned at 80% height
             left: 20.0,
             right: 20.0,
             child: ElevatedButton(
@@ -231,7 +246,7 @@ class _SignInPageState extends State<SignInPage> {
 
           // Forgot Password
           Positioned(
-            top: deviceHeight * 0.74, // Positioned at 88% height
+            top: deviceHeight * 0.779, // Positioned at 88% height
             left: 0,
             right: 0,
             child: Center(

@@ -19,7 +19,6 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
   TextEditingController usertype = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController confirmpassword = TextEditingController();
-  // TextEditingController email = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,12 +30,12 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
         children: [
           // Top Surface Image
           Positioned(
-            top: deviceHeight * 0.0, 
+            top: deviceHeight * 0.0,
             left: 0,
             right: 0,
             child: SizedBox(
               width: double.infinity,
-              height: deviceHeight * 0.2, 
+              height: deviceHeight * 0.2,
               child: Image.asset(
                 'assets/images/create_an_account/top_surface.png',
                 fit: BoxFit.cover,
@@ -66,10 +65,9 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
             ),
           ),
 
-
           // Text Fields
           Positioned(
-            top: deviceHeight * 0.3, 
+            top: deviceHeight * 0.3,
             left: 20.0,
             right: 20.0,
             child: Column(
@@ -101,65 +99,73 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   ),
                 ),
 
-                const SizedBox(height: 20.0),
+                const SizedBox(height: 15.0),
 
-                // First Name Field
-                TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: const Color(0xFFF5F5F5),
-                    hintText: 'Full Name',
-                    hintStyle: const TextStyle(
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
-                      color: Colors.grey,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: const BorderSide(
-                        color: Color(0xFFD9D9D9),
+                Row(
+                  children: [
+                    // First Name Field
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: const Color(0xFFF5F5F5),
+                          hintText: 'First Name',
+                          hintStyle: const TextStyle(
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                            color: Colors.grey,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: const BorderSide(
+                              color: Color(0xFFD9D9D9),
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: const BorderSide(
+                              color: Color(0xFFD9D9D9),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: const BorderSide(
-                        color: Color(0xFFD9D9D9),
+
+                    SizedBox(width: 15.0),
+
+                    // Last Name Field
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: const Color(0xFFF5F5F5),
+                          hintText: 'Last Name',
+                          hintStyle: const TextStyle(
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                            color: Colors.grey,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: const BorderSide(
+                              color: Color(0xFFD9D9D9),
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: const BorderSide(
+                              color: Color(0xFFD9D9D9),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
 
-                // SizedBox(height: 20.0),
-
-                // // Last Name Field
-                // TextField(
-                //   decoration: InputDecoration(
-                //     filled: true,
-                //     fillColor: Color(0xFFF5F5F5),
-                //     hintText: 'Last Name',
-                //     hintStyle: TextStyle(
-                //       fontFamily: 'Inter',
-                //       fontWeight: FontWeight.w400,
-                //       fontSize: 16,
-                //       color: Colors.grey,
-                //     ),
-                //     border: OutlineInputBorder(
-                //       borderRadius: BorderRadius.circular(10.0),
-                //       borderSide: BorderSide(
-                //         color: Color(0xFFD9D9D9),
-                //       ),
-                //     ),
-                //     enabledBorder: OutlineInputBorder(
-                //       borderRadius: BorderRadius.circular(10.0),
-                //       borderSide: BorderSide(
-                //         color: Color(0xFFD9D9D9),
-                //       ),
-                //     ),
-                //   ),
-                // ),
-
-                const SizedBox(height: 20.0),
+                const SizedBox(height: 15.0),
 
                 // User Type Field
                 TextField(
@@ -187,8 +193,8 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     ),
                   ),
                 ),
-                
-                const SizedBox(height: 20.0),
+
+                const SizedBox(height: 15.0),
 
                 // Password Text Field
                 TextField(
@@ -230,7 +236,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20.0),
+                const SizedBox(height: 15.0),
 
                 // Confirm Password Text Field
                 TextField(
@@ -278,7 +284,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
 
           // Create An Account Button
           Positioned(
-            top: deviceHeight * 0.725, 
+            top: deviceHeight * 0.725,
             left: 20.0,
             right: 20.0,
             child: ElevatedButton(
@@ -291,12 +297,14 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     width: 1.0,
                   ),
                 ),
-                minimumSize: const Size(double.infinity, 50), // Full-width button
+                minimumSize:
+                    const Size(double.infinity, 50), // Full-width button
               ),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => OTPConfirmationPage()),
+                  MaterialPageRoute(
+                      builder: (context) => OTPConfirmationPage()),
                 );
               },
               child: const Text(
@@ -313,7 +321,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
 
           // Already Have An Account Section
           Positioned(
-            top: deviceHeight * 0.92, 
+            top: deviceHeight * 0.92,
             left: 0,
             right: 0,
             child: Center(
@@ -333,7 +341,8 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const SignInPage()),
+                        MaterialPageRoute(
+                            builder: (context) => const SignInPage()),
                       );
                     },
                     child: const Text(
