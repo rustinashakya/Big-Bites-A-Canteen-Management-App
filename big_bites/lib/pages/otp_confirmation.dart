@@ -1,3 +1,5 @@
+import 'package:big_bites/context/app_colors.dart';
+import 'package:big_bites/context/fonts.dart';
 import 'package:big_bites/pages/sign_in.dart';
 import 'package:big_bites/pages/welcome.dart';
 import 'package:flutter/material.dart';
@@ -167,15 +169,9 @@ class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  "Already have an Account?",
-                  style: TextStyle(
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16,
-                    color: Color(0xFF5F5F5F),
-                  ),
-                ),
+                Text("Already have an Account?",
+                    style:
+                        Fonts.bodySmallInter.copyWith(color: AppColors.grey)),
                 TextButton(
                   onPressed: () {
                     Navigator.push(

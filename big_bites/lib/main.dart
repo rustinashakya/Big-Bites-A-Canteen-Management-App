@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:big_bites/pages/splash.dart';
+import 'package:big_bites/pages/dashboard_page/dashboard_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: Splash(),
-      // home: const Splash()
+      // home: const Splash(),
+      // home: const DashboardPage(),
       // home: CreateAnAccountPage(),
       // home: WelcomePage(),
       // home: OrderNow(),

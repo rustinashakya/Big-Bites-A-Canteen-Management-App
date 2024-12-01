@@ -12,7 +12,8 @@ import '../../common_widget/app_button_widget.dart';
 import '../../common_widget/food_item_widget.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage({super.key, required this.isStaff});
+  final bool isStaff;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,7 @@ class HomePage extends StatelessWidget {
       children: [
         TopTitleWidget(
           title: 'Big Bites',
+          isStaff: isStaff,
         ),
         Text(
           'Order your favorite food!',

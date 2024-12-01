@@ -7,9 +7,13 @@ class AppButtonWidget extends StatelessWidget {
       required this.child,
       this.height,
       this.elevation = 0,
-      this.color});
+      this.color,
+      this.width,
+      this.borderRadius = 20});
   final Widget child;
   final double? height;
+  final double? width;
+  final double borderRadius;
   final Color? color;
   final double elevation;
 
@@ -18,7 +22,9 @@ class AppButtonWidget extends StatelessWidget {
     return MaterialButton(
       onPressed: () {},
       height: height,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      minWidth: width,
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(borderRadius)),
       color: color ?? AppColors.primaryColor,
       splashColor: Colors.transparent,
       elevation: elevation,

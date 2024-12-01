@@ -15,6 +15,7 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
+  bool isStaff = true;
   int currentIndex = 2;
   @override
   Widget build(BuildContext context) {
@@ -23,12 +24,22 @@ class _DashboardPageState extends State<DashboardPage> {
         padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
         child: IndexedStack(
           index: currentIndex,
-          children: const [
-            HomePage(),
-            MenuPage(),
-            CartPage(),
-            TrackOrderPage(),
-            FavoritePage()
+          children: [
+            HomePage(
+              isStaff: isStaff,
+            ),
+            MenuPage(
+              isStaff: isStaff,
+            ),
+            CartPage(
+              isStaff: isStaff,
+            ),
+            TrackOrderPage(
+              isStaff: isStaff,
+            ),
+            FavoritePage(
+              isStaff: isStaff,
+            )
           ],
         ),
       ),

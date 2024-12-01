@@ -1,9 +1,10 @@
-import 'package:big_bites/context/fonts.dart';
-import 'package:big_bites/context/images.dart';
 import 'package:flutter/material.dart';
 
-class FoodItemWidget extends StatelessWidget {
-  const FoodItemWidget({super.key, this.onItemClick});
+import '../../../../context/fonts.dart';
+import '../../../../context/images.dart';
+
+class ItemStaffWidget extends StatelessWidget {
+  const ItemStaffWidget({super.key, this.onItemClick});
   final VoidCallback? onItemClick;
 
   @override
@@ -44,18 +45,11 @@ class FoodItemWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Icon(
-                      Icons.star,
-                      color: Colors.yellow,
-                    ),
-                    Text(
-                      "4.9",
-                    ),
-                  ],
-                ),
-                Icon(Icons.favorite_border),
+                IconButton(
+                    onPressed: () {}, icon: Image.asset(AppIcons.editItemIcon)),
+                IconButton(
+                    onPressed: () {},
+                    icon: Image.asset(AppIcons.deleteItemIcon)),
               ],
             )
           ],

@@ -31,4 +31,7 @@ class AppIcons {
   static const String chickenChowmein = '${svgsPath}chicken_chowmein.png';
   static const String puriTarkari = '${svgsPath}puri_tarkari.png';
   static const String steamChickenMomo = '${svgsPath}steam_chicken_momo.png';
+  static const String addMenu = '${svgsPath}add_menu.png';
+  static const String editItemIcon = '${svgsPath}edit_item_icon.png';
+  static const String deleteItemIcon = '${svgsPath}delete_item_icon.png';
 }

@@ -1,5 +1,5 @@
-import 'package:big_bites/context/fonts.dart';
 import 'package:big_bites/context/ui_extention.dart';
+import 'package:big_bites/pages/dashboard_page/dashboard_page.dart';
 import 'package:big_bites/pages/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
@@ -133,7 +133,12 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                           minimumSize: const Size(
                               double.infinity, 50), // Full-width button
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DashboardPage()));
+                        },
                         child: const Text("Sign Up"),
                       ),
                     ],
