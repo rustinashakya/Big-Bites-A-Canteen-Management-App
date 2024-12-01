@@ -26,68 +26,74 @@ class _OrganizationCodeState extends State<OrganizationCode> {
       backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
-          Column(
-            children: [
-              // First Image
-              Container(
+          // Top Surface Image
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: SizedBox(
+              height: deviceHeight * 0.3,
+              child: Image.asset(
+                'assets/images/organization_code/top_surface.png',
+                fit: BoxFit.cover,
                 width: double.infinity,
-                child: Image.asset(
-                  'assets/images/organization_code/top_surface.png',
-                  fit: BoxFit.cover,
-                ),
               ),
-              SizedBox(height: 8.0),
+            ),
+          ),
 
-              // Second Image
-              Container(
-                width: double.infinity,
-                height: MediaQuery.of(context).size.height * 0.4,
+          // Big Bites Logo
+          Positioned(
+            top: deviceHeight * 0.27, 
+            left: 0,
+            right: 0,
+            child: Center(
+              child: SizedBox(
+                width: 350, 
+                height: 350, 
                 child: Image.asset(
                   'assets/images/splash/BigBites.png',
                   fit: BoxFit.contain,
                 ),
               ),
-            ],
+            ),
           ),
 
           // Text Fields
           Positioned(
-            top: deviceHeight * 0.768, 
+            top: deviceHeight * 0.76, 
             left: 20.0,
             right: 20.0,
             child: Column(
               children: [
-                // text field
-               SizedBox(
-                  width: double.infinity,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Color(0xFFF5F5F5), // Background color
-                      hintText: 'Add Your Organization Code ',
-                      hintStyle: TextStyle(
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w400, // Regular weight
-                        fontSize: 18,
-                        color: Colors.grey,
+                // Email Text Field
+                TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color(0xFFF5F5F5),
+                    hintText: 'Organization Code',
+                    hintStyle: const TextStyle(
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
                       ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                        borderSide: BorderSide(
-                          color: Color(0xFFD9D9D9),
-                        ),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                        borderSide: BorderSide(
-                          color: Color(0xFFD9D9D9),
-                        ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
                       ),
                     ),
                   ),
                 ),
 
-                SizedBox(height: 16.0), // Gap between buttons
+
+                SizedBox(height: 15.0), // Gap between buttons
 
                 // Let's go Button 
                 ElevatedButton(
@@ -101,7 +107,7 @@ class _OrganizationCodeState extends State<OrganizationCode> {
                         width: 1.0,
                       ),
                     ),
-                    minimumSize: Size(double.infinity, 60), // Full-width button
+                    minimumSize: Size(double.infinity, 50), // Full-width button
                   ),
                   onPressed: () {
                     Navigator.push(

@@ -14,6 +14,13 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
   bool _isPasswordVisible = false;
   String? _selectedUserType;
 
+  TextEditingController email = TextEditingController();
+  TextEditingController name = TextEditingController();
+  TextEditingController usertype = TextEditingController();
+  TextEditingController password = TextEditingController();
+  TextEditingController confirmpassword = TextEditingController();
+  // TextEditingController email = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final deviceHeight = MediaQuery.of(context).size.height;
