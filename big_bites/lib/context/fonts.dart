@@ -8,14 +8,8 @@ class Fonts {
       GoogleFonts.inter(fontSize: 24, fontWeight: FontWeight.normal);
   static TextStyle topTitleLargeKaushan =
       GoogleFonts.kaushanScript(fontSize: 40, fontWeight: FontWeight.normal);
-  static TextStyle labelLargeInter =
-      GoogleFonts.inter(fontSize: 24, fontWeight: FontWeight.normal);
-  static TextStyle bodyLargeInter =
-      GoogleFonts.inter(fontSize: 20, fontWeight: FontWeight.normal);
   static TextStyle bodyMediumInter =
       GoogleFonts.inter(fontSize: 18, fontWeight: FontWeight.normal);
-  static TextStyle bodySmallInter =
-      GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.normal);
 }
 
 const demoDetailInfo =

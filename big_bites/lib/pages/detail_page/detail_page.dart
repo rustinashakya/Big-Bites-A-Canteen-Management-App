@@ -1,8 +1,5 @@
-import 'package:big_bites/context/app_colors.dart';
 import 'package:big_bites/context/fonts.dart';
 import 'package:big_bites/context/images.dart';
-import 'package:big_bites/context/ui_extention.dart';
-import 'package:big_bites/pages/common_widget/app_button_widget.dart';
 import 'package:big_bites/pages/detail_page/widget/name_review_favorite_widget.dart';
 import 'package:big_bites/pages/detail_page/widget/quantity_add_sub_widget.dart';
 import 'package:flutter/material.dart';
@@ -20,49 +17,56 @@ class _DetailPageState extends State<DetailPage> {
       appBar: AppBar(), // Set white background for the page
       body: Padding(
         padding: const EdgeInsets.all(15.0),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(child: Image.asset(Images.doubleCheese)),
-              20.verticalBox,
-              NameReviewFavoriteWidget(),
-              40.verticalBox,
-              Text(
-                demoDetailInfo,
-                style: Fonts.bodyMediumInter,
-                textAlign: TextAlign.justify,
-              ),
-              SizedBox(height: 10),
-              Text(
-                "Quantity",
-                style: Fonts.bodyMediumInter,
-                textAlign: TextAlign.start,
-              ),
-              SizedBox(height: 10),
-              QuantityAddSubWidget(),
-              SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  AppButtonWidget(
-                    child: Text(
-                      "Rs 300",
-                      style: Fonts.labelLargeInter,
-                    ).px(20).py(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_outlined)),
+            Center(child: Image.asset(Images.doubleCheese)),
+            NameReviewFavoriteWidget(),
+            SizedBox(height: 10),
+            Text(
+              demoDetailInfo,
+              style: Fonts.bodyMediumInter,
+              textAlign: TextAlign.justify,
+            ),
+            SizedBox(height: 10),
+            Text(
+              "Quantity",
+              style: Fonts.bodyMediumInter,
+              textAlign: TextAlign.justify,
+            ),
+            SizedBox(height: 10),
+            QuantityAddSubWidget(),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    // Logic for the first button
+                    print("Button 1 clicked");
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor:
+                        Colors.yellow, // Set background color to yellow
                   ),
-                  AppButtonWidget(
-                    color: AppColors.buttonRed,
-                    child: Text(
-                      "Add",
-                      style:
-                          Fonts.labelLargeInter.copyWith(color: Colors.white),
-                    ).px(20).py(10),
-                  )
-                ],
-              ),
-            ],
-          ),
+                  child: Text("Rs 300"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // Logic for the second button
+                    print("Button 2 clicked");
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red, // Set background color to red
+                  ),
+                  child: Text(
+                    "Add",
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

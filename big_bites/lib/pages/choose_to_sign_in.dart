@@ -3,11 +3,11 @@ import 'package:big_bites/pages/sign_in.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
-      const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: ChooseToSignIn(),
-      ),
-    );
+  const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: ChooseToSignIn(),
+  ),
+);
 
 class ChooseToSignIn extends StatefulWidget {
   const ChooseToSignIn({super.key});
@@ -42,13 +42,13 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
 
           // Big Bites Logo
           Positioned(
-            top: deviceHeight * 0.27,
+            top: deviceHeight * 0.27, 
             left: 0,
             right: 0,
             child: Center(
               child: SizedBox(
-                width: 350,
-                height: 350,
+                width: 350, 
+                height: 350, 
                 child: Image.asset(
                   'assets/images/splash/BigBites.png',
                   fit: BoxFit.contain,
@@ -59,7 +59,7 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
 
           // Buttons
           Positioned(
-            top: deviceHeight * 0.77,
+            top: deviceHeight * 0.77, 
             left: 20.0,
             right: 20.0,
             child: Column(
@@ -67,63 +67,61 @@ class _ChooseToSignInState extends State<ChooseToSignIn> {
                 // Sign In Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFF1B136),
+                    backgroundColor: const Color(0xFFF1B136), 
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                       side: BorderSide(
-                        color: Colors.black.withOpacity(0.25),
+                        color: Colors.black.withOpacity(0.25), 
                         width: 1.0,
                       ),
                     ),
-                    minimumSize: const Size(double.infinity, 50),
+                    minimumSize: const Size(double.infinity, 50), 
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const SignInPage()),
+                      MaterialPageRoute(builder: (context) => const SignInPage()),
                     );
                   },
                   child: const Text(
                     'Sign In',
                     style: TextStyle(
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w400,
+                      fontFamily: 'Inter', 
+                      fontWeight: FontWeight.w400, 
                       fontSize: 18,
                       color: Colors.black,
                     ),
                   ),
                 ),
 
-                const SizedBox(height: 15.0),
+                const SizedBox(height: 15.0), 
 
                 // Create an Account Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFFFFFFF),
+                    backgroundColor: const Color(0xFFFFFFFF), 
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                       side: BorderSide(
-                        color: Colors.black.withOpacity(0.25),
+                        color: Colors.black.withOpacity(0.25), 
                         width: 1.0,
                       ),
                     ),
-                    minimumSize: const Size(double.infinity, 50),
+                    minimumSize: const Size(double.infinity, 50), 
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const CreateAnAccountPage()),
+                      MaterialPageRoute(builder: (context) => const CreateAnAccountPage()),
                     );
                   },
                   child: const Text(
                     'Create an Account',
                     style: TextStyle(
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w400,
-                      fontSize: 18,
-                      color: Colors.black,
+                      fontFamily: 'Inter', 
+                      fontWeight: FontWeight.w400, 
+                      fontSize: 18, 
+                      color: Colors.black, 
                     ),
                   ),
                 ),

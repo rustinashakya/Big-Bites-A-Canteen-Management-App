@@ -1,6 +1,3 @@
-import 'package:big_bites/context/app_colors.dart';
-import 'package:big_bites/context/fonts.dart';
-import 'package:big_bites/context/ui_extention.dart';
 import 'package:big_bites/pages/create_an_account.dart';
 import 'package:big_bites/pages/welcome.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -40,7 +37,6 @@ class _SignInPageState extends State<SignInPage> {
     final deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
@@ -78,12 +74,12 @@ class _SignInPageState extends State<SignInPage> {
 
           // Top Surface Image
           Positioned(
-            top: deviceHeight * 0.0,
+            top: deviceHeight * 0.0, 
             left: 0,
             right: 0,
             child: SizedBox(
               width: double.infinity,
-              height: deviceHeight * 0.2,
+              height: deviceHeight * 0.2, 
               child: Image.asset(
                 'assets/images/sign_in/top_surface.png',
                 fit: BoxFit.cover,
@@ -293,8 +289,7 @@ class _SignInPageState extends State<SignInPage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => CreateAnAccountPage()),
+                        MaterialPageRoute(builder: (context) => CreateAnAccountPage()),
                       );
                     },
                     child: const Text(
@@ -311,10 +306,6 @@ class _SignInPageState extends State<SignInPage> {
               ),
             ),
           ),
-
-          // Forgot Password
-
-          // Donot Have An Account Section
         ],
       ),
     );

@@ -6,6 +6,7 @@ import 'package:big_bites/pages/dashboard_page/home_page/home_page.dart';
 import 'package:big_bites/pages/dashboard_page/menu_page/menu_page.dart';
 import 'package:big_bites/pages/dashboard_page/track_order_page/track_order_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -15,31 +16,20 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  bool isStaff = true;
   int currentIndex = 2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
+        padding: const EdgeInsets.all(10.0),
         child: IndexedStack(
           index: currentIndex,
-          children: [
-            HomePage(
-              isStaff: isStaff,
-            ),
-            MenuPage(
-              isStaff: isStaff,
-            ),
-            CartPage(
-              isStaff: isStaff,
-            ),
-            TrackOrderPage(
-              isStaff: isStaff,
-            ),
-            FavoritePage(
-              isStaff: isStaff,
-            )
+          children: const [
+            HomePage(),
+            MenuPage(),
+            CartPage(),
+            TrackOrderPage(),
+            FavoritePage()
           ],
         ),
       ),
@@ -55,37 +45,53 @@ class _DashboardPageState extends State<DashboardPage> {
             });
           },
           items: [
-            _bottomNavigationBarItem(
-                displayIcon: currentIndex == 0
-                    ? AppIcons.homeSelected
-                    : AppIcons.homeUnselected),
-            _bottomNavigationBarItem(
-                displayIcon: currentIndex == 1
-                    ? AppIcons.menuSelected
-                    : AppIcons.menuUnselected),
-            _bottomNavigationBarItem(
-                displayIcon: currentIndex == 2
-                    ? AppIcons.cartSelected
-                    : AppIcons.cartUnselected),
-            _bottomNavigationBarItem(
-                displayIcon: currentIndex == 3
-                    ? AppIcons.trackerSelected
-                    : AppIcons.trackerUnselected),
-            _bottomNavigationBarItem(
-                displayIcon: currentIndex == 4
-                    ? AppIcons.favoriteSelected
-                    : AppIcons.favoriteUnselected),
-          ]),
-    );
-  }
+            BottomNavigationBarItem(
+                icon:
 
-  BottomNavigationBarItem _bottomNavigationBarItem(
-      {required String displayIcon}) {
-    return BottomNavigationBarItem(
-      label: '',
-      icon: Image.asset(
-        displayIcon,
-      ),
+                    // currentIndex == 0
+                    //     ? SvgPicture.asset(
+                    //         AppIcons.homeSelected,
+                    //       )
+                    //     : SvgPicture.asset(
+                    //         'assets/icons/home_icon.svg',
+                    //         height: 15,
+                    //         width: 15,
+                    //       ),
+                    Icon(
+                  currentIndex == 0 ? Icons.home : Icons.home_outlined,
+                  color: Colors.black,
+                ),
+                label: "",
+                backgroundColor: AppColors.primaryColor),
+            const BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.menu_outlined,
+                  color: Colors.black,
+                ),
+                label: "",
+                backgroundColor: AppColors.primaryColor),
+            const BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.shopping_cart_outlined,
+                  color: Colors.black,
+                ),
+                label: "",
+                backgroundColor: AppColors.primaryColor),
+            const BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.timer,
+                  color: Colors.black,
+                ),
+                label: "",
+                backgroundColor: AppColors.primaryColor),
+            const BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.favorite_border,
+                  color: Colors.black,
+                ),
+                label: "",
+                backgroundColor: AppColors.primaryColor),
+          ]),
     );
   }
 }

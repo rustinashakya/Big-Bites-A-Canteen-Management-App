@@ -1,19 +1,11 @@
-import 'package:big_bites/context/app_colors.dart';
-import 'package:big_bites/context/fonts.dart';
-import 'package:big_bites/context/ui_extention.dart';
-import 'package:big_bites/pages/common_widget/app_button_widget.dart';
-import 'package:big_bites/pages/common_widget/top_title_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_form_builder/flutter_form_builder.dart';
-
-final GlobalKey _formKey = GlobalKey<FormState>();
 
 void main() => runApp(
-      const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: AddMenu(),
-      ),
-    );
+  const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: AddMenu(),
+  ),
+);
 
 class AddMenu extends StatefulWidget {
   const AddMenu({super.key});
@@ -28,82 +20,264 @@ class _AddMenu extends State<AddMenu> {
     final deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      resizeToAvoidBottomInset: true,
-      body: Padding(
-        padding: const EdgeInsets.only(
-            left: 10.0, right: 10.0, bottom: 10.0, top: 25.0),
-        child: Column(
-          children: [
-            TopTitleWidget(
-              title: "Add Menu",
-            ),
-            20.verticalBox,
-            Expanded(
-                child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  _buildTextField(
-                      name: 'itemName', hintText: 'Name of the item'),
-                  15.verticalBox,
-                  _buildTextField(name: 'image', hintText: 'Add an image'),
-                  15.verticalBox,
-                  _buildTextField(
-                    name: 'description',
-                    hintText: 'Description',
-                    maxLines: 4,
-                  ),
-                  15.verticalBox,
-                  _buildTextField(name: 'price', hintText: 'Price'),
-                  15.verticalBox,
-                  _buildTextField(name: 'rating', hintText: 'Ratings'),
-                  15.verticalBox,
-                  _buildTextField(name: 'order', hintText: 'Order By'),
-                  15.verticalBox,
-                ],
-              ),
-            )),
-            AppButtonWidget(
-              color: AppColors.buttonRed,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Add to Today's Menu",
-                  style: Fonts.labelLargeInter.copyWith(color: Colors.white),
+      backgroundColor: const Color(0xFFFFFFFF),
+      body: Stack(
+        children: [
+          //Title Name
+        Positioned(
+          top: deviceHeight * 0.1, // Vertical position (10% of the screen height)
+          left: 25, // Horizontal position from the left edge
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start, // Aligns content to the left
+            children: [
+              Text(
+                'Add Menu',
+                style: TextStyle(
+                  fontFamily: 'Kaushan Script',
+                  fontWeight: FontWeight.w600,
+                  fontSize: 40,
+                  color: Color(0xFF000000),
                 ),
               ),
-              width: double.infinity,
-              borderRadius: 15,
-            ),
-            20.verticalBox
-          ],
-        ),
-      ),
-    );
-  }
+            ],
+          ),
+          ),
 
-  Widget _buildTextField(
-      {required String name, required String hintText, int? maxLines}) {
-    return FormBuilderTextField(
-      name: name,
-      minLines: maxLines,
-      maxLines: maxLines,
-      decoration: InputDecoration(
-        filled: true,
-        fillColor: const Color(0xFFF5F5F5),
-        hintText: hintText,
-        hintStyle: const TextStyle(color: Colors.grey),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10.0),
-          borderSide: const BorderSide(
-            color: Color(0xFFD9D9D9),
+          //Text Field
+          Positioned(
+            top: deviceHeight * 0.2,
+            left: 20.0,
+            right: 20.0,
+            child: Center(
+              child: Column(
+                children: [
+                  //
+                  TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color(0xFFF5F5F5),
+                    hintText: 'Name of the Item',
+                    hintStyle: const TextStyle(
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 30.0),
+                //
+                TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color(0xFFF5F5F5),
+                    hintText: 'Add picture ',
+                    hintStyle: const TextStyle(
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 30.0),
+
+                // Description
+                SizedBox(
+                  width: 400, // Desired width
+                  height: 170, // Desired height
+                  child: TextField(
+                    maxLines: null, // Allows unlimited lines for multi-line input
+                    expands: true,  // Ensures the TextField expands to fill its parent
+                    textAlignVertical: TextAlignVertical.top, // Aligns text to the top
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: const Color(0xFFF5F5F5),
+                      hintText: 'Description',
+                      hintStyle: const TextStyle(
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16,
+                        color: Colors.grey,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide: const BorderSide(
+                          color: Color(0xFFD9D9D9),
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide: const BorderSide(
+                          color: Color(0xFFD9D9D9),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+
+                const SizedBox(height: 20.0),
+
+                TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color(0xFFF5F5F5),
+                    hintText: 'Price',
+                    hintStyle: const TextStyle(
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 20.0),
+
+                TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color(0xFFF5F5F5),
+                    hintText: 'Ratings',
+                    hintStyle: const TextStyle(
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 20.0),
+
+                TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color(0xFFF5F5F5),
+                    hintText: 'Ordered By',
+                    hintStyle: const TextStyle(
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    
+                    ),
+                  ),
+                ),
+                  const SizedBox(height: 30.0),
+                ],
+              ),
+            ),
           ),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10.0),
-          borderSide: const BorderSide(
-            color: Color(0xFFD9D9D9),
+        
+          // Buttons
+          Positioned(
+            top: deviceHeight * 0.830, 
+            left: 15.0,
+            right: 20.0,
+            child: Column(
+              children: [
+                //Add Today's menu 
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFF63333), 
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(13.0),
+                      side: BorderSide(
+                        color: Colors.black.withOpacity(0.25), 
+                        width: 1.0,
+                      ),
+                    ),
+                    minimumSize: const Size(double.infinity, 50), 
+                  ),
+                  onPressed: () {
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => SignInPage()),
+                    // );
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0), // Adjust padding as needed
+                    child: Text(
+                      "Add to Today's Menu",
+                      style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w400,
+                        fontSize: 24,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 16.0), 
+              ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

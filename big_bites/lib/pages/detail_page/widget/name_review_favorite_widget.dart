@@ -1,5 +1,4 @@
 import 'package:big_bites/context/fonts.dart';
-import 'package:big_bites/context/ui_extention.dart';
 import 'package:flutter/material.dart';
 
 class NameReviewFavoriteWidget extends StatelessWidget {
@@ -22,7 +21,6 @@ class NameReviewFavoriteWidget extends StatelessWidget {
             ),
           ],
         ),
-        10.verticalBox,
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

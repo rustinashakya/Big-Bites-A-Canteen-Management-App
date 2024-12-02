@@ -1,9 +1,7 @@
-import 'package:big_bites/context/ui_extention.dart';
-import 'package:big_bites/pages/dashboard_page/dashboard_page.dart';
 import 'package:big_bites/pages/otp_confirmation.dart';
 import 'package:big_bites/pages/sign_in.dart';
+import 'package:big_bites/pages/welcome.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 class CreateAnAccountPage extends StatefulWidget {
   const CreateAnAccountPage({super.key});
@@ -41,8 +39,6 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               child: Image.asset(
                 'assets/images/create_an_account/top_surface.png',
                 fit: BoxFit.cover,
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 0.20, // Top 35%
               ),
             ),
           ),
@@ -75,11 +71,9 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
             left: 20.0,
             right: 20.0,
             child: Column(
-              children: [  
-
-                // Email Text Field 
+              children: [
+                // Email Text Field
                 TextField(
-                  controller: email,
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: const Color(0xFFF5F5F5),
@@ -105,7 +99,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   ),
                 ),
 
-                SizedBox(height: 15.0),
+                const SizedBox(height: 15.0),
 
                 Row(
                   children: [
