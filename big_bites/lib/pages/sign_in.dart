@@ -46,7 +46,7 @@ class _SignInPageState extends State<SignInPage> {
         children: [
           // User Image
           Positioned(
-            top: deviceHeight * 0.192, 
+            top: deviceHeight * 0.192,
             left: 0,
             right: 0,
             child: Center(
@@ -61,7 +61,7 @@ class _SignInPageState extends State<SignInPage> {
             ),
           ),
           // Positioned(
-          //   top: deviceHeight * 0.3, 
+          //   top: deviceHeight * 0.3,
           //   left: 0,
           //   right: 0,
           //   child: Center(
@@ -104,7 +104,7 @@ class _SignInPageState extends State<SignInPage> {
                     style: TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.bold,
-                      fontSize: 30,
+                      fontSize: 25,
                       color: Color(0xFFFFC01E),
                     ),
                   ),
@@ -113,32 +113,31 @@ class _SignInPageState extends State<SignInPage> {
             ),
           ),
 
-
           // sign In Text
           Positioned(
             top: deviceHeight * 0.225,
             left: 20.0,
             right: 20.0,
             // child: Center(
-              child: Column(
-                children: [
-                  Text(
-                    'Sign In',
-                    style: TextStyle(
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 24,
-                      color: Color(0xFF1E1E1E),
-                    ),
+            child: Column(
+              children: [
+                Text(
+                  'Sign In',
+                  style: TextStyle(
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 24,
+                    color: Color(0xFF1E1E1E),
                   ),
-                ],
-              ),
+                ),
+              ],
+            ),
             // ),
           ),
 
           // Text Fields
           Positioned(
-            top: deviceHeight * 0.543, 
+            top: deviceHeight * 0.543,
             left: 20.0,
             right: 20.0,
             child: Column(
@@ -233,9 +232,10 @@ class _SignInPageState extends State<SignInPage> {
                     width: 1.0,
                   ),
                 ),
-                minimumSize: const Size(double.infinity, 50), // Full-width button
+                minimumSize:
+                    const Size(double.infinity, 50), // Full-width button
               ),
-              onPressed: (()=>signIn()),
+              onPressed: (() => signIn()),
               child: Text(
                 'Sign In',
                 style: TextStyle(
@@ -273,7 +273,7 @@ class _SignInPageState extends State<SignInPage> {
 
           // Donot Have An Account Section
           Positioned(
-            top: deviceHeight * 0.92, 
+            top: deviceHeight * 0.92,
             left: 0,
             right: 0,
             child: Center(

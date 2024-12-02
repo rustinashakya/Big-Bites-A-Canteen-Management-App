@@ -27,6 +27,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
     final deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: const Color(0xFFFFFFFF),
       body: Stack(
         children: [
           // Top Surface Image
@@ -74,117 +75,37 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
             left: 20.0,
             right: 20.0,
             child: Column(
-              children: [
-                // Top Section
-                // Container(
-                //   height: MediaQuery.of(context).size.height *
-                //       0.89, // Takes 85% of the screen
-                //   padding: const EdgeInsets.symmetric(horizontal: 20),
-                //   child: Column(
-                //     children: [
-                //       40.verticalBox,
-                //       const Text(
-                //         "Sign Up",
-                //         style: TextStyle(
-                //           fontFamily: 'Inter',
-                //           fontWeight: FontWeight.bold,
-                //           fontSize: 24,
-                //           color: Colors.black,
-                //         ),
-                //       ),
-                //       80.verticalBox,
-                      // Expanded(
-                      //   child: Column(
-                      //     children: [
-                      //       // Email Field
-                      //       _buildTextField(name: 'email', hintText: 'Email'),
+              children: [  
 
-                      //       const SizedBox(height: 10),
+                // Email Text Field 
+                TextField(
+                  controller: email,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color(0xFFF5F5F5),
+                    hintText: 'Email',
+                    hintStyle: const TextStyle(
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: const BorderSide(
+                        color: Color(0xFFD9D9D9),
+                      ),
+                    ),
+                  ),
+                ),
 
-                      //       // Name Fields
-                      //       Row(
-                      //         children: [
-                      //           Expanded(
-                      //             child: _buildTextField(
-                      //                 name: 'firstName',
-                      //                 hintText: 'First Name'),
-                      //           ),
-                      //           const SizedBox(width: 10),
-                      //           Expanded(
-                      //             child: _buildTextField(
-                      //                 name: 'lastName', hintText: 'Last Name'),
-                      //           ),
-                      //         ],
-                      //       ),
-
-                      //       const SizedBox(height: 10),
-
-                      //       // User Type Dropdown
-                      //       _buildDropdown(
-                      //         name: 'userType',
-                      //         hintText: 'User Type',
-                      //         items: const [
-                      //           DropdownMenuItem(
-                      //               value: 'Staff', child: Text('Staff')),
-                      //           DropdownMenuItem(
-                      //               value: 'Customer', child: Text('Customer')),
-                      //         ],
-                      //       ),
-
-                      //       const SizedBox(height: 10),
-
-                      //       // Organization Dropdown
-                      //       _buildDropdown(
-                      //         name: 'organization',
-                      //         hintText: 'Organization',
-                      //         items: const [
-                      //           DropdownMenuItem(
-                      //               value: 'Company A',
-                      //               child: Text('Company A')),
-                      //           DropdownMenuItem(
-                      //               value: 'Company B',
-                      //               child: Text('Company B')),
-                      //         ],
-                      //       ),
-
-                      //       const SizedBox(height: 10),
-
-                      //       // Password Fields
-                      //       _buildTextField(
-                      //           name: 'password', hintText: 'Password'),
-                      //       const SizedBox(height: 10),
-                      //       _buildTextField(
-                      //           name: 'confirmPassword',
-                      //           hintText: 'Confirm Password'),
-                      //     ],
-                      //   ),
-                      // ),
-                //       ElevatedButton(
-                //         style: ElevatedButton.styleFrom(
-                //           backgroundColor: const Color(0xFFF1B136),
-                //           shape: RoundedRectangleBorder(
-                //             borderRadius: BorderRadius.circular(50.0),
-                //             side: BorderSide(
-                //               color: Colors.black.withOpacity(0.25),
-                //               width: 1.0,
-                //             ),
-                //           ),
-                //           minimumSize: const Size(
-                //               double.infinity, 50), // Full-width button
-                //         ),
-                //         onPressed: () {
-                //           Navigator.push(
-                //               context,
-                //               MaterialPageRoute(
-                //                   builder: (context) => DashboardPage()));
-                //         },
-                //         child: const Text("Sign Up"),
-                //       ),
-                //     ],
-                //   ),
-                // ),
-
-                const SizedBox(height: 15.0),
+                SizedBox(height: 15.0),
 
                 Row(
                   children: [
