@@ -2,4 +2,9 @@ import 'dart:ui';
 
 class AppColors {
   static const primaryColor = Color(0xFFF1B136);
+  static const grey = Color(0xFF5F5F5F);
+  static const buttonRed = Color(0xFFF63333);
+  static const buttonGreen = Color(0xFF0ED841);
+  static const yellow = Color(0xFFFFC01E);
+  static const unpaidOrder = Color(0xFFEFEFEF);
 }
