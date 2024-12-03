@@ -68,7 +68,8 @@ class _AddMenu extends State<AddMenu> {
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   "Add to Today's Menu",
-                  style: Fonts.labelLargeInter.copyWith(color: Colors.white),
+                  style: AppTextStyle.labelLargeInter
+                      .copyWith(color: Colors.white),
                 ),
               ),
               width: double.infinity,

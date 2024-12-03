@@ -170,8 +170,8 @@ class _OTPConfirmationPageState extends State<OTPConfirmationPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("Already have an Account?",
-                    style:
-                        Fonts.bodySmallInter.copyWith(color: AppColors.grey)),
+                    style: AppTextStyle.bodySmallInter
+                        .copyWith(color: AppColors.grey)),
                 TextButton(
                   onPressed: () {
                     Navigator.push(

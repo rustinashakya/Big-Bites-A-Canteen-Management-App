@@ -24,7 +24,7 @@ class NotificationWidget extends StatelessWidget {
           ]),
       child: Text(
         notificationMessage,
-        style: Fonts.bodyLargeInter,
+        style: AppTextStyle.bodyLargeInter,
       ),
     ).py(8);
   }

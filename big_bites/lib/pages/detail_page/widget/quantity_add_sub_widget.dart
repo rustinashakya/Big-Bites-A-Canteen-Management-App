@@ -14,7 +14,7 @@ class QuantityAddSubWidget extends StatelessWidget {
         ),
         Text(
           "1",
-          style: Fonts.labelLargeInter,
+          style: AppTextStyle.labelLargeInter,
         ),
         SizedBox(
           width: 30,

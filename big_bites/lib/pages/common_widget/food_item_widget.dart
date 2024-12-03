@@ -37,7 +37,7 @@ class FoodItemWidget extends StatelessWidget {
             ),
             Text(
               'Double Cheese Burger',
-              style: Fonts.bodyMediumInter,
+              style: AppTextStyle.bodyMediumInter,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),

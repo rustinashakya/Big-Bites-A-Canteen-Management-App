@@ -27,7 +27,7 @@ class TopTitleWidget extends StatelessWidget {
             child: Text(
               title,
               overflow: TextOverflow.ellipsis,
-              style: Fonts.topTitleLargeKaushan,
+              style: AppTextStyle.topTitleLargeKaushan,
             ),
           ),
           isStaff

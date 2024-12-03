@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.5.2
+  sdk: ^3.5.1
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -44,18 +44,19 @@ dependencies:
   flutter_svg: ^2.0.16
   build_runner: ^2.4.13
   flutter_native_splash: ^2.4.3
-
+  flutter_bloc: ^8.1.6
   cloud_firestore: ^5.5.0
+  get_it: ^8.0.2
 
 
 
 flutter_native_splash:
   color: "#ffffff"
-  color_dark: "#010101"
-  image: assets/images/app_logo.png
+  color_dark: "#ffffff"
+  image: assets/images/splash/BigBites.png
   android_12:
     color: "#ffffff"
-    color_dark: "#010101"
+    color_dark: "#ffffff"
     image: assets/images/splash/BigBites.png
   android: true
   ios: true

@@ -30,13 +30,13 @@ class _DetailPageState extends State<DetailPage> {
               40.verticalBox,
               Text(
                 demoDetailInfo,
-                style: Fonts.bodyMediumInter,
+                style: AppTextStyle.bodyMediumInter,
                 textAlign: TextAlign.justify,
               ),
               SizedBox(height: 10),
               Text(
                 "Quantity",
-                style: Fonts.bodyMediumInter,
+                style: AppTextStyle.bodyMediumInter,
                 textAlign: TextAlign.start,
               ),
               SizedBox(height: 10),
@@ -48,15 +48,15 @@ class _DetailPageState extends State<DetailPage> {
                   AppButtonWidget(
                     child: Text(
                       "Rs 300",
-                      style: Fonts.labelLargeInter,
+                      style: AppTextStyle.labelLargeInter,
                     ).px(20).py(10),
                   ),
                   AppButtonWidget(
                     color: AppColors.buttonRed,
                     child: Text(
                       "Add",
-                      style:
-                          Fonts.labelLargeInter.copyWith(color: Colors.white),
+                      style: AppTextStyle.labelLargeInter
+                          .copyWith(color: Colors.white),
                     ).px(20).py(10),
                   )
                 ],

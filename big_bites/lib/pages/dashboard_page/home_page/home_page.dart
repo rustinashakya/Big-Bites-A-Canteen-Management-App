@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
         ),
         Text(
           'Order your favorite food!',
-          style: Fonts.bodyLargeInter.copyWith(color: AppColors.grey),
+          style: AppTextStyle.bodyLargeInter.copyWith(color: AppColors.grey),
         ).px(10),
         16.verticalBox,
         Row(

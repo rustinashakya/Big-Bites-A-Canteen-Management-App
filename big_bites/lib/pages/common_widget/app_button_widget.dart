@@ -9,18 +9,20 @@ class AppButtonWidget extends StatelessWidget {
       this.elevation = 0,
       this.color,
       this.width,
-      this.borderRadius = 20});
+      this.borderRadius = 20,
+      this.onButtonPressed});
   final Widget child;
   final double? height;
   final double? width;
   final double borderRadius;
   final Color? color;
   final double elevation;
+  final VoidCallback? onButtonPressed;
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: onButtonPressed,
       height: height,
       minWidth: width,
       shape: RoundedRectangleBorder(

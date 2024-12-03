@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Fonts {
+class AppTextStyle {
   static const titleLarge =
       TextStyle(fontSize: 24, fontWeight: FontWeight.normal);
   static TextStyle titleLargeInter =
@@ -10,6 +10,9 @@ class Fonts {
       GoogleFonts.kaushanScript(fontSize: 40, fontWeight: FontWeight.normal);
   static TextStyle labelLargeInter =
       GoogleFonts.inter(fontSize: 24, fontWeight: FontWeight.normal);
+  static TextStyle labelMediumInter =
+      GoogleFonts.inter(fontSize: 22, fontWeight: FontWeight.normal);
+
   static TextStyle bodyLargeInter =
       GoogleFonts.inter(fontSize: 20, fontWeight: FontWeight.normal);
   static TextStyle bodyMediumInter =

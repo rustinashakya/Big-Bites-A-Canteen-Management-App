@@ -17,7 +17,7 @@ class MenuPage extends StatelessWidget {
         TopTitleWidget(
           title: "Today's Menu",
           isStaff: isStaff,
-          isTodayMenu: true,
+          isTodayMenu: isStaff,
           onAddButtonClicked: () {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => AddMenu()));

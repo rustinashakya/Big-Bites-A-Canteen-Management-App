@@ -1,18 +1,21 @@
+import 'package:big_bites/pages/common_widget/app_button_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../context/app_colors.dart';
 import '../../../../context/fonts.dart';
 import '../../../../context/images.dart';
 
 class ItemStaffWidget extends StatelessWidget {
-  const ItemStaffWidget({super.key, this.onItemClick});
+  ItemStaffWidget({super.key, this.onItemClick});
   final VoidCallback? onItemClick;
+  bool isStaff = false;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onItemClick,
       child: Container(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(16)),
@@ -38,20 +41,46 @@ class ItemStaffWidget extends StatelessWidget {
             ),
             Text(
               'Double Cheese Burger',
-              style: Fonts.bodyMediumInter,
+              style: AppTextStyle.bodyMediumInter,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                    onPressed: () {}, icon: Image.asset(AppIcons.editItemIcon)),
-                IconButton(
-                    onPressed: () {},
-                    icon: Image.asset(AppIcons.deleteItemIcon)),
-              ],
-            )
+            isStaff
+                ? Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                          onPressed: () {},
+                          icon: Image.asset(AppIcons.editItemIcon)),
+                      IconButton(
+                          onPressed: () {},
+                          icon: Image.asset(AppIcons.deleteItemIcon)),
+                    ],
+                  )
+                : Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: AppColors.yellow,
+                          ),
+                          Text(
+                            '4.9',
+                            style: AppTextStyle.bodyMediumInter,
+                          )
+                        ],
+                      ),
+                      AppButtonWidget(
+                          child: Text(
+                        "Done",
+                        style: AppTextStyle.bodyMediumInter
+                            .copyWith(color: Colors.white),
+                      ))
+                    ],
+                  )
           ],
         ),
       ),

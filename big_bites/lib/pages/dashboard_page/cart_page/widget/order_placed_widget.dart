@@ -30,7 +30,7 @@ class OrderPlacedWidget extends StatelessWidget {
                 child: Text(
                   'Order Placed by Ashwinsha',
                   maxLines: 2,
-                  style: Fonts.bodyLargeInter,
+                  style: AppTextStyle.bodyLargeInter,
                 ),
               ),
               SizedBox(
@@ -78,8 +78,8 @@ class OrderPlacedWidget extends StatelessWidget {
                       color: AppColors.buttonGreen,
                       child: Text(
                         'Payment Done',
-                        style:
-                            Fonts.labelLargeInter.copyWith(color: Colors.white),
+                        style: AppTextStyle.labelLargeInter
+                            .copyWith(color: Colors.white),
                       ),
                     ),
                     10.verticalBox,
@@ -88,7 +88,7 @@ class OrderPlacedWidget extends StatelessWidget {
                         width: double.infinity,
                         color: AppColors.buttonRed,
                         child: Text('Order Completed',
-                            style: Fonts.labelLargeInter
+                            style: AppTextStyle.labelLargeInter
                                 .copyWith(color: Colors.white))),
                   ],
                 ).py(10)
@@ -100,7 +100,7 @@ class OrderPlacedWidget extends StatelessWidget {
                         color: AppColors.buttonGreen,
                         child: Text(
                           'Accept',
-                          style: Fonts.labelLargeInter
+                          style: AppTextStyle.labelLargeInter
                               .copyWith(color: Colors.white),
                         ),
                       ),
@@ -111,7 +111,7 @@ class OrderPlacedWidget extends StatelessWidget {
                             height: 60,
                             color: AppColors.buttonRed,
                             child: Text('Deny',
-                                style: Fonts.labelLargeInter
+                                style: AppTextStyle.labelLargeInter
                                     .copyWith(color: Colors.white)))),
                   ],
                 )
@@ -134,12 +134,13 @@ class _OrderPlacedKeyValue extends StatelessWidget {
         Expanded(
             child: Text(
           title,
-          style: Fonts.bodyMediumInter.copyWith(fontWeight: FontWeight.w700),
+          style: AppTextStyle.bodyMediumInter
+              .copyWith(fontWeight: FontWeight.w700),
         )),
         Expanded(
             child: Text(
           value,
-          style: Fonts.bodyMediumInter,
+          style: AppTextStyle.bodyMediumInter,
         )),
       ],
     );

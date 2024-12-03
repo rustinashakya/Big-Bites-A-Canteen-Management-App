@@ -34,7 +34,7 @@ class _SearchWidgetState extends State<SearchWidget> {
           contentPadding: EdgeInsets.only(left: 20),
           fillColor: Colors.white,
           filled: true,
-          hintStyle: Fonts.bodyLargeInter,
+          hintStyle: AppTextStyle.bodyLargeInter,
           prefixIcon: Image.asset(AppIcons.searchIcon),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(16)),

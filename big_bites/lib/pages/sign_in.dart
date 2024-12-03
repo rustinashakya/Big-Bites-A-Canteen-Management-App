@@ -2,6 +2,7 @@ import 'package:big_bites/context/app_colors.dart';
 import 'package:big_bites/context/fonts.dart';
 import 'package:big_bites/context/ui_extention.dart';
 import 'package:big_bites/pages/create_an_account.dart';
+import 'package:big_bites/pages/dashboard_page/dashboard_page.dart';
 import 'package:big_bites/pages/welcome.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -79,13 +80,13 @@ class _SignInPageState extends State<SignInPage> {
                         ),
                         Text(
                           'Welcome Back!',
-                          style: Fonts.labelLargeInter.copyWith(
+                          style: AppTextStyle.labelLargeInter.copyWith(
                               fontWeight: FontWeight.w700,
                               fontSize: 32,
                               color: AppColors.yellow),
                         ),
                         Text('Sign In',
-                            style: Fonts.labelLargeInter.copyWith(
+                            style: AppTextStyle.labelLargeInter.copyWith(
                                 fontWeight: FontWeight.w600, fontSize: 28)),
                         10.verticalBox,
                         TextField(
@@ -188,7 +189,12 @@ class _SignInPageState extends State<SignInPage> {
                             minimumSize: const Size(
                                 double.infinity, 50), // Full-width button
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DashboardPage()));
+                          },
                           child: Text(
                             'Sign In',
                             style: TextStyle(

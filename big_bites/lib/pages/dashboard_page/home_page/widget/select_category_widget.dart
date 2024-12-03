@@ -25,7 +25,7 @@ class _SelectCategoryWidgetState extends State<SelectCategoryWidget> {
               elevation: 10,
               child: Text(
                 widget.categories[index],
-                style: Fonts.bodyLargeInter,
+                style: AppTextStyle.bodyLargeInter,
               ).px(5),
             ).py(20).px(8);
           }),

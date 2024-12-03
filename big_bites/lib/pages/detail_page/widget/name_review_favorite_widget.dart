@@ -14,7 +14,7 @@ class NameReviewFavoriteWidget extends StatelessWidget {
           children: [
             Text(
               "Double Cheese Burger",
-              style: Fonts.titleLargeInter,
+              style: AppTextStyle.titleLargeInter,
             ),
             Icon(
               Icons.favorite,
