@@ -1,18 +1,22 @@
-name: pizza_app
-description: "A new Flutter project."
-publish_to: 'none'
-version: 0.1.0
+name: big_bites
+description: "Big Bites - A Canteen Management App"
+publish_to: 'none' 
+version: 1.0.0+1
 
 environment:
-  sdk: '>=3.2.3 <4.0.0'
-
+  sdk: ^3.5.2
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.6
-  font_awesome_flutter: ^10.6.0
+  
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  pinput: ^5.0.0
+  flutter_svg: ^2.0.16
+  build_runner: ^2.4.13
+  flutter_native_splash: ^2.4.3
 
-  firebase_core: ^2.16.0
+  cloud_firestore: ^5.5.0
 
   bloc: ^8.1.2
   flutter_bloc: ^8.1.3
@@ -20,17 +24,30 @@ dependencies:
 
   user_repository:
     path: packages/user_repository
-  pizza_repository:
-    path: packages/pizza_repository
+
+
+
+flutter_native_splash:
+  color: "#ffffff"
+  color_dark: "#010101"
+  image: assets/images/app_logo.png
+  android_12:
+    color: "#ffffff"
+    color_dark: "#010101"
+    image: assets/images/splash/BigBites.png
+  android: true
+  ios: true
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^4.0.0
 
 flutter:
+
   uses-material-design: true
 
+  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/splash/
     - assets/images/choose_to_sign_in/
