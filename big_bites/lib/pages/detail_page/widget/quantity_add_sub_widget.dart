@@ -1,3 +1,4 @@
+import 'package:big_bites/context/fonts.dart';
 import 'package:flutter/material.dart';
 
 class QuantityAddSubWidget extends StatelessWidget {
@@ -11,7 +12,10 @@ class QuantityAddSubWidget extends StatelessWidget {
         SizedBox(
           width: 30,
         ),
-        Text("1"),
+        Text(
+          "1",
+          style: AppTextStyle.labelLargeInter,
+        ),
         SizedBox(
           width: 30,
         ),
