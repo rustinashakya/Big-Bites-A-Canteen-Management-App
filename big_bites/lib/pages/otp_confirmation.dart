@@ -1,6 +1,6 @@
 import 'package:big_bites/context/app_colors.dart';
 import 'package:big_bites/context/fonts.dart';
-import 'package:big_bites/pages/sign_in.dart';
+import 'package:big_bites/pages/sign_in_page/sign_in.dart';
 import 'package:big_bites/pages/welcome.dart';
 import 'package:flutter/material.dart';
 

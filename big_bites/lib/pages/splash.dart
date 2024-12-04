@@ -1,5 +1,5 @@
 import 'package:big_bites/pages/dashboard_page/dashboard_page.dart';
-import 'package:big_bites/pages/sign_in.dart';
+import 'package:big_bites/pages/sign_in_page/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 

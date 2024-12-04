@@ -5,7 +5,7 @@ import 'package:big_bites/context/ui_extention.dart';
 import 'package:big_bites/model/user_model/user_model.dart';
 import 'package:big_bites/pages/common_widget/app_button_widget.dart';
 import 'package:big_bites/pages/dashboard_page/dashboard_page.dart';
-import 'package:big_bites/pages/sign_in.dart';
+import 'package:big_bites/pages/sign_in_page/sign_in.dart';
 import 'package:big_bites/services/auth_user_repo.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +41,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
       isStaff: _formKey.currentState?.fields['userType']?.value ?? '',
       organization: _formKey.currentState?.fields['organization']?.value ?? '',
     );
-    var password = _formKey.currentState?.fields['email']?.value ?? '';
+    var password = _formKey.currentState?.fields['password']?.value ?? '';
     log("the user model is here ${user.firstName}");
     _newUserCubit.createAccount(user, password);
   }
@@ -130,7 +130,6 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                                               Expanded(
                                                 child: _buildTextField(
                                                   name: 'firstName',
-                                                  initialValue: 'initial',
                                                   hintText: 'First Name',
                                                   validator: (value) {
                                                     if (value == null ||

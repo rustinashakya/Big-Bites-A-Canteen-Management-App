@@ -1,4 +1,5 @@
 import 'package:big_bites/pages/dashboard_page/home_page/register_new_user_cubit/register_new_user_cubit.dart';
+import 'package:big_bites/pages/sign_in_page/sign_in_firebase_cubit/sign_in_firebase_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'firebase_options.dart';
@@ -31,6 +32,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider<RegisterNewUserCubit>(
           create: (context) => locator<RegisterNewUserCubit>(),
+        ),
+        BlocProvider<SignInFirebaseCubit>(
+          create: (context) => locator<SignInFirebaseCubit>(),
         ),
       ],
       child: MaterialApp(
