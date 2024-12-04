@@ -1,6 +1,6 @@
 import 'package:big_bites/pages/choose_to_sign_in.dart';
 import 'package:big_bites/pages/create_an_account.dart';
-import 'package:big_bites/pages/sign_in.dart';
+import 'package:big_bites/pages/sign_in/sign_in.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
