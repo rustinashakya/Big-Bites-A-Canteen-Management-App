@@ -1,5 +1,6 @@
-import 'package:big_bites/pages/choose_to_sign_in.dart';
-import 'package:big_bites/pages/organization_code.dart';
+
+import 'package:big_bites/pages/welcome.dart';
+import 'package:big_bites/pages/welcome_pcps.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -17,41 +18,28 @@ class _SplashState extends State<Splash> {
   }
 
   _navigateToHome() async {
-    // Reduce the duration for better user experience
-    await Future.delayed(const Duration(milliseconds: 2500));
+    await Future.delayed(const Duration(milliseconds: 1500));
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => const OrganizationCode(),
+        builder: (context) => WelcomePagePCPS(),
       ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    final deviceHeight = MediaQuery.of(context).size.height;
-
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Stack(
-        children: [
-          // Big Bites Logo
-          Positioned(
-            top: deviceHeight * 0.27, // Position dynamically at 27% of screen height
-            left: 0,
-            right: 0,
-            child: Center(
-              child: SizedBox(
-                width: 350, // Adjusted width
-                height: 350, // Adjusted height
-                child: Image.asset(
-                  'assets/images/splash/BigBites.png',
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
+      body: Center(
+        child: SizedBox(
+          width: 300,
+          height: 300,
+          child: Image.asset(
+            'assets/images/splash/BigBites.png',
+            fit: BoxFit.contain,
           ),
-        ],
+        ),
       ),
     );
   }
